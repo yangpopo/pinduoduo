@@ -1,0 +1,130 @@
+.official-coupon-effective{
+  width: 100%;
+  .official-coupon-effective-box{
+    width: 100%;
+    min-height: 25vw;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 2vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    .tag{
+      position: absolute;
+      top: 11%;
+      left: -11%;
+      background-color: #0ab809;
+      color: #fff;
+      padding: 1vw 0;
+      width: 30vw;
+      text-align: center;
+      transform: rotate(-45deg);
+      white-space: nowrap;
+      font-size: 3vw;
+    }
+    &:before{
+      content: " ";
+      display: block;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      background-color: #f4f4f4;
+      position: absolute;
+      top: 50%;
+      left: -2.5%;
+      transform: translateY(-50%);
+    }
+    &:after{
+      content: " ";
+      display: block;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      background-color: #f4f4f4;
+      position: absolute;
+      top: 50%;
+      right: -2.5%;
+      transform: translateY(-50%);
+    }
+    .price-box{
+      color: #dd312f;
+      width: 20%;
+      flex-shrink: 0;
+      text-align: center;
+      dt{
+        margin: 0 auto;
+        font-size: 5vw;
+        margin-bottom: 1vw;
+        em{
+          font-size: 8vw;
+          list-style: none;
+        }
+      }
+      dd{
+        font-size: 3.5vw;
+      }
+    }
+    .coupon-info{
+      width: 50%;
+      margin-right: 10%;
+      dt{
+        font-size: 3.5vw;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        color: #080808;
+        line-height: 5vw;
+      }
+      dd{
+        font-size: 3.5vw;
+        color: #949494;
+      }
+    }
+    .but{
+      width: 18vw;
+      position: relative;
+      margin-right: 5%;
+      dt{
+        width: 100%;
+        background-color: #dd312f;
+        border-radius: 1vw;
+        box-sizing: border-box;
+        padding: 2.5vw 1vw;
+        font-size: 3.5vw;
+        text-align: center;
+        color: #fff;
+      }
+      dd{
+        position: relative;
+        svg.icon{
+          position: absolute;
+          width: 4vw;
+          height: 4vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          color: #9b9b9b;
+          left: 50%;
+          bottom: -5vw;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+  .coupon-explain{
+    width: 100%;
+    background-color: #ededed;
+    box-sizing: border-box;
+    padding: 2vw;
+    font-size: 3.5vw;
+    color: #979797;
+    line-height: 5vw;
+    border-radius: 0 0 2vw 2vw;
+  }
+}

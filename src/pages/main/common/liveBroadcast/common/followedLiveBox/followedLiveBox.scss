@@ -1,0 +1,64 @@
+.followed-live-box{
+  width: 25vw !important;
+  height: 35vw;
+  flex-shrink: 0;
+  border-radius: 1vw;
+  position: relative;
+  overflow: hidden;
+  margin-right: 2vw;
+  .img-box{
+    position: absolute;
+    z-index: 0;
+    height: 110%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .head-icon{
+    position: absolute;
+    background-color: #e52d25;
+    width: 6vw;
+    height: 4vw;
+    border-radius: 0 0 2vw 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    .icon{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 3vw;
+      height: 3vw;
+      vertical-align: middle;
+      fill: currentColor;
+      overflow: hidden;
+      color: #fff;
+    }
+  }
+  .info-box{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vw;
+    background-image: linear-gradient(#00000000, #000000a1);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1.5vw;
+    font-size: 3vw;
+    color: #fff;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+    img{
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      margin-right: 1vw;
+    }
+  }
+}

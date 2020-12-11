@@ -1,0 +1,25 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .main-box{
+    width: 100vw;
+    height: calc(100vh - 50px);
+    overflow: hidden;
+  }
+  .za-tab-bar{
+    svg{
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      fill: currentColor;
+      overflow: hidden;
+      &.main-icon-selected{
+        color: #db3124;
+      }
+      &.main-icon{
+        color: #5d5d5d;
+      }
+    }
+  }
+}

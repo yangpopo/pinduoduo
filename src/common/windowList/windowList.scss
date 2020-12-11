@@ -1,0 +1,94 @@
+.window-list{
+  width: 100vw;
+  background-color: #f3f4f8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .list-left, .list-right{
+    width: 49vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .list-left{
+    margin: 0 1vw;
+  }
+  .unit-box{
+    width: 49vw;
+    background-color: #fff;
+    margin-bottom: 1vw;
+    display: flex;
+    flex-direction: column;
+    .img-box{
+      width: 49vw;
+      height: 49vw;
+    }
+    .box{
+      width: 100%;
+      padding: 1.5vw 2vw;
+      box-sizing: border-box;
+      .title-box{
+        font-size: 3.2vw;
+        color: #1c1c1c;
+        margin-bottom: 2vw;
+        width: 100%;
+        overflow: hidden;/*超出部分隐藏*/
+        white-space: nowrap;/*不换行*/
+        text-overflow:ellipsis;/*超出部分文字以...显示*/
+        span{
+          margin-right: 1vw;
+        }
+      }
+      .tag-box{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1vw;
+        b{
+          background-color: #ffefe7;
+          padding: 1vw;
+          display: block;
+          margin-right: 2vw;
+          color: #ee641b;
+          border-radius: 1vw;
+          font-weight: normal;
+          font-size: 3vw;
+          margin-bottom: 1vw;
+        }
+      }
+      .info-box{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        height: 6vw;
+        .info{
+          color: #949494;
+          font-size: 3vw;
+          b.price{
+            font-size: 3vw;
+            color: #ea281c;
+            margin-right: 1vw;
+            span{
+              font-size: 4.5vw;
+            }
+          }
+        }
+        .user-box{
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 2vw;
+          img{
+            width: 6.5vw;
+            height: 6.5vw;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin-right: -2vw;
+          }
+        }
+      }
+    }
+  }
+}

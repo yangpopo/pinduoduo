@@ -1,0 +1,64 @@
+.evaluate-popup{
+  .evaluate-box{
+    height: calc(50vh - 12vw - 15vw);
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .evaluate-info-tips{
+      width: 100%;
+      padding: 20vw 0 0 0;
+      text-align: center;
+      color: #a7a7a7;
+      font-size: 3.5vw;
+    }
+    .evaluate-info{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      align-items: flex-start;
+      width: 95%;
+      padding: 3vw 0;
+      margin: 0 auto;
+      box-sizing: border-box;
+      border-bottom: 1px solid #eeeded;
+      > img{
+        width: 8vw;
+        height: 8vw;
+        border-radius: 50%;
+        margin-right: 2vw;
+      }
+      .info-box{
+        .name{
+          width: 100%;
+          font-size: 3.5vw;
+          color: #a7a7a7;
+          margin-bottom: 2vw;
+          b{
+            color: #0d0d0d;
+            font-weight: normal;
+          }
+        }
+        .text{
+          width: 100%;
+          font-size: 3.5vw;
+          line-height: 4vw;
+          color: #4e4e4e;
+          margin-bottom: 2vw;
+        }
+        .time{
+          width: 100%;
+          font-size: 3vw;
+          color: #a7a7a7;
+        }
+      }
+    }
+  }
+  .evaluate-fun{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  
+}

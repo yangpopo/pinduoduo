@@ -1,0 +1,86 @@
+.quick-menu{
+  width: 100vw;
+  height: 15vw;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  border-top: 1px solid #dfdfdf;
+  .fun-but{
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    height: 15vw;
+    li{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5vw;
+      color: #4c4c4c;
+      width: 33.33333%;
+      height: 15vw;
+      a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.5vw;
+        color: #4c4c4c;
+        width: 33.33333%;
+        height: 15vw;
+        white-space:nowrap;
+      }
+      svg.icon{
+        width: 6vw;
+        height: 6vw;
+        margin-bottom: 1vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #888888;
+      }
+    }
+  }
+  .purchase-but{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    height: 15vw;
+    text-align: center;
+    dt{
+      height: 15vw;
+      width: 25vw;
+      color: #fff;
+      background-color: #f5aba8;
+      font-size: 4vw;
+      line-height: 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    dd{
+      height: 15vw;
+      width: 35vw;
+      color: #fff;
+      background-color: #df2e26;
+      font-size: 4vw;
+      line-height: 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

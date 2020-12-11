@@ -1,0 +1,104 @@
+.store-info-box{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3vw;
+  background-color: #fff;
+  .head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    .name{
+      font-size: 4vw;
+      font-weight: bold;
+      color: #3f3f41;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      img{
+        width: 12vw;
+        height: 12vw;
+        border-radius: 3px;
+        margin-right: 5px;
+      }
+    }
+    .go-shop{
+      background-color: #fff;
+      border: 1px solid #b5b5b5;
+      padding: 2vw 2vw;
+      color: #121212;
+      font-size: 3.5vw;
+      border-radius: 5px;
+    }
+  }
+  .info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    .score{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      font-size: 3.5vw;
+      color: #4d4d4f;
+      svg.icon{
+        width: 5vw;
+        height: 5vw;
+      }
+    }
+    .parameter{
+      font-size: 3.5vw;
+      color: #4d4d4f;
+    }
+  }
+  .swiper-store-info-box{
+    width: 100%;
+    height: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+    .store-commodity{
+      height: calc(100% / 2);
+      > img{
+        width: 30.2vw;
+        height: 30.2vw;
+        margin-bottom: 2vw;
+      }
+      .name{
+        font-size: 3vw;
+        font-weight: bold;
+        color: #141416;
+        width: 100%;
+        overflow: hidden;/*超出部分隐藏*/
+        white-space: nowrap;/*不换行*/
+        text-overflow:ellipsis;/*超出部分文字以...显示*/
+        margin-bottom: 2vw;
+      }
+      .info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        span{
+          color: #e12931;
+          font-size: 3vw;
+          b{
+            font-size: 3.5vw;
+          }
+        }
+        em{
+          font-size: 3vw;
+          color: #9a9a9a;
+        }
+      }
+    }
+  }
+}

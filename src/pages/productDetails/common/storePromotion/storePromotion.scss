@@ -1,0 +1,24 @@
+// 店铺活动
+.store-promotion-popup{
+  .store-promotion-box{
+    width: 100vw;
+    height: 100%;
+    padding: 3vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    touch-action: pan-y;
+    >.title{
+      width: 100%;
+      font-size: 3.5vw;
+      height: 7vw;
+      line-height: 7vw;
+    }
+    .shop-recurrence-box{
+      margin-bottom: 3vw;
+    }
+    .shop-coupons-box{
+      margin-bottom: 3vw;
+    }
+  }
+}

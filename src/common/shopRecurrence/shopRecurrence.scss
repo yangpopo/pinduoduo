@@ -1,0 +1,56 @@
+.shop-recurrence{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  .package{
+    width: 10vw;
+    height: 13.5vw;
+    background-image: url("../../assets/img/public/red-envelopes.png");
+    background-size: 100% 100%;
+    position: relative;
+    margin-right: 3vw;
+    span{
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translateX(-50%);
+      color: #ffff;
+      font-size: 3vw;
+      b{
+        font-size: 4.5vw;
+      }
+    }
+    em{
+      position: absolute;
+      font-size: 3vw;
+      color: #fff;
+      left: 50%;
+      transform: translateX(-50%) scale(0.7);
+      bottom: 5%;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+  }
+  .progress-box{
+    .explain{
+      font-size: 3.5vw;
+      color: #474749;
+      margin-bottom: 5px;
+      b{
+        font-weight: normal;
+        color: #e32e27;
+        padding: 0 2px;
+      }
+    }
+    .progress{
+      .za-progress__track{
+        background-color: #ffc09e;
+      }
+    }
+  }
+}

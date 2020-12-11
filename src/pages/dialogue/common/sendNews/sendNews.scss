@@ -1,0 +1,41 @@
+.send-news{
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 3vw;
+  padding: 0 3vw 0 20vw;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  .head-portrait{
+    width: 11vw;
+    height: 11vw;
+    margin-left: 3.5vw;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+  .news-box{
+    background-color: #9eea6a;
+    box-sizing: border-box;
+    padding: 3vw;
+    font-size: 3.5vw;
+    color: #060606;
+    border-radius: 2vw;
+    position: relative;
+    z-index: 1;
+    line-height: 5vw;
+    &:before{
+      content:" ";
+      display: block;
+      position: absolute;
+      background-color: #9eea6a;
+      width: 3.5vw;
+      height: 3.5vw;
+      top: 4.5vw;
+      right: -1.5vw;
+      transform: rotate(45deg);
+      z-index: 0;
+    }
+  }
+}

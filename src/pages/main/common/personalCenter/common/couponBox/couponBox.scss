@@ -1,0 +1,30 @@
+.coupon-box{
+  width: 94vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 4vw 3vw;
+  border-radius: 3vw 3vw 0 0;
+  background-color: #fdefef;
+  color: #df2f17;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  span{
+    font-size: 3.5vw;
+    em{
+      font-size: 3vw;
+      margin-left: 2vw;
+      padding-left: 2vw;
+      border-left: 1px solid #f3e1e1;
+    }
+  }
+  svg.icon{
+    width: 3vw;
+    height: 3vw;
+    vertical-align: middle;
+    fill: currentColor;
+    overflow: hidden;
+  }
+}

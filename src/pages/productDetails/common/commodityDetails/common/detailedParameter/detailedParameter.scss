@@ -1,0 +1,39 @@
+.detailed-box{
+  width: 95vw;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 1vw 3vw;
+  .detailed-info{
+    height: 6vw;
+    line-height: 6vw;
+    width: 100%;
+    font-size: 3vw;
+    color: #131313;
+    display: flex;
+    span{
+      color: #969696;
+      width: 25%;
+    }
+  }
+}
+.parameter-popup{
+  .parameter-box{
+    padding: 3vw;
+    .parameter-unit{
+      width: 100%;
+      padding: 2.5vw 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      font-size: 3.5vw;
+      color: #0d0d0d;
+      border-bottom: 1px solid #f4f4f4;
+      span{
+        width: 30%;
+        color: #9b9b9b;
+      }
+    }
+  }
+}

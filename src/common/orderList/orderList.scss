@@ -1,0 +1,277 @@
+.order-list{
+  width: 100%;
+  box-sizing: border-box;
+  .data-none{
+    width: 100%;
+    padding-top: 30vw;
+    .icon-order{
+      fill: currentColor;
+      overflow: hidden;
+      width: 25vw;
+      height: 25vw;
+      color: #d8d8d8;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 3vw;
+    }
+    p{
+      font-size: 3.5vw;
+      text-align: center;
+      color: #b6b6b6;
+    }
+  }
+
+  .order-unit{
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 2vw;
+    .product-info{
+      width: 100%;
+      border-bottom: 1px solid #f4f4f4;
+      .head-box{
+        width: 100%;
+        padding: 2vw 3vw;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .head{
+          font-size: 3.5vw;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          color: #141414;
+          img{
+            width: 6.5vw;
+            height: 6.5vw;
+            border-radius: 1vw;
+            margin-right: 2vw;
+          }
+          .icon{
+            width: 4vw;
+            height: 4vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+            margin-left: 0.5vw;
+            color: #686868;
+          }
+        }
+        .state{
+          font-size: 3.5vw;
+          color: #d73147;
+        }
+      }
+      .product-box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 2vw 3vw;
+        box-sizing: border-box;
+        .product-head{
+          width: 20vw;
+          height: 20vw;
+          border-radius: 1vw;
+          margin-right: 2vw;
+          flex-shrink: 0;
+        }
+        .info-box{
+          width: auto;
+          border: none;
+          margin-right: 2vw;
+          li{
+            &.name{
+              font-size: 3.5vw;
+              font-weight: bold;
+              color: #111111;
+              line-height: 4.5vw;
+            }
+            &.parameter{
+              font-size: 3vw;
+              color: #9c9c9c;
+              line-height: 4.5vw;
+              margin-bottom: 2vw;
+            }
+            &.label{
+              span{
+                background-color: #1dbb06;
+                padding: 0.5vw;
+                border-radius: 2px;
+                color: #fff;
+                font-size: 3vw;
+              }
+            }
+          }
+        }
+      }
+      .price{
+        text-align: right;
+        dt{
+          font-size: 3.5vw;
+          color: #161616;
+          margin-bottom: 2vw;
+        }
+        dd{
+          font-size: 3vw;
+          color: #9c9c9c;
+        }
+      }
+    }
+    .pay-info{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 2vw 3vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f4f4f4;
+      .compose{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-left: 1vw;
+        img{
+          width: 6.5vw;
+          height: 6.5vw;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          margin-left: -1vw;
+        }
+      }
+      .price{
+        font-size: 3.5vw;
+        color: #0b090a;
+        svg.icon{
+          width: 5vw;
+          height: 5vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          color: #ea3430;
+        }
+        em{
+          font-size: 4vw;
+        }
+      }
+    }
+    .operate-info{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 2vw 3vw;
+      .operate-box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        
+        @mixin but {
+          display: block;
+          color: #0b0b0b;
+          font-size: 3.5vw;
+          padding: 2vw;
+          margin-left: 1.5vw;
+        }
+        .more-but{
+          @include but;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          position: relative;
+          .menu-box{
+            display: none;
+            position: absolute;
+            z-index: 1;
+            background-color: #fff;
+            box-shadow: 0 0 3px 3px #cecece9e;
+            padding: 2vw;
+            border-radius: 5px;
+            bottom: -18vw;
+            left: 50%;
+            transform: translateX(-50%);
+            &:before{
+              content:" ";
+              display: block;
+              width: 3vw;
+              height: 3vw;
+              background-color: #fff;
+              position: absolute;
+              top: 0vw;
+              left: 50%;
+              transform: rotate(45deg) translateX(-50%);
+            }
+            li{
+              font-size: 3.5vw;
+              padding: 1.5vw 2.5vw;
+              border-bottom: 1px solid #f9f9f9;
+              white-space:nowrap;
+              a{
+                color: #0b0b0b;
+              }
+              &:last-of-type{
+                border: none;
+              }
+            }
+          }
+        }
+        a.link-but{
+          @include but;
+          border: 1px solid #afafaf;
+          border-radius: 1vw;
+        }
+        .confirm-but{
+          @include but;
+          background-color: #df2e24;
+          border-radius: 1vw;
+          color: #fff;
+        }
+      }
+      .info-box{
+        background-color: #f4f4f4;
+        padding: 1vw 1.5vw;
+        border-radius: 2vw;
+        margin-top: 2vw;
+        position: relative;
+        z-index: 0;
+        &:before {
+          content: " ";
+          display: block;
+          position: absolute;
+          width: 2vw;
+          height: 2vw;
+          background-color: #f4f4f4;
+          top: -1vw;
+          right: 28vw;
+          transform: rotate(45deg);
+        }
+        .box{
+          width: 100%;
+          display: block;
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          font-size: 3vw;
+          color: #606060;
+        }
+        .icon-express{
+          width: 6vw;
+          height: 6vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          color: #d2d2d2;
+          margin-right: 1vw;
+        }
+      }
+    }
+  }
+}

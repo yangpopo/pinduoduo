@@ -1,0 +1,26 @@
+.home{
+  width: 100vw;
+  height: 100%;
+  background-color: #df2e24;
+  box-sizing: border-box;
+  padding-top: 35px;
+  .am-tabs{
+    height: calc(100% - 9.5vw);
+  }
+  .am-tabs-tab-bar-wrap{
+    height: 40px;
+    line-height: 40px;
+  }
+  .am-tabs-default-bar-tab:after{
+    display: none !important;
+  }
+  .am-tabs-default-bar-top .am-tabs-default-bar-tab{
+    font-size: 3.5vw;
+  }
+  .am-tabs-default-bar-tab-active{
+    font-weight: bold;
+  }
+  .am-tabs-default-bar-top .am-tabs-default-bar-nextpage, .am-tabs-default-bar-bottom .am-tabs-default-bar-nextpage, .am-tabs-default-bar-top .am-tabs-default-bar-prevpage, .am-tabs-default-bar-bottom .am-tabs-default-bar-prevpage{
+    display: none;
+  }
+}

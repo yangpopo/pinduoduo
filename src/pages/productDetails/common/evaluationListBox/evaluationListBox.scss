@@ -1,0 +1,178 @@
+.evaluation-list-box{
+  width: 100%;
+  background-color: #ffffff;
+  .evaluation-list-title{
+    .za-cell__inner{
+      min-height: 35px;
+    }
+    .za-cell__content{
+      font-size: 3.5vw;
+      color: #151515;
+    }
+    .za-cell__footer{
+      font-size: 3vw;
+      color: #8c8c8c;
+    }
+  }
+  .evaluation-key{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding: 3vw;
+    box-sizing: border-box;
+    span{
+      padding: 0vw 2vw;
+      height: 6.5vw;
+      border-radius: 5px;
+      margin: 0 2vw 2vw 0;
+      font-size: 3vw;
+      color: #575151;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      svg.icon{
+        width: 3.5vw;
+        height: 3.5vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        margin-right: 1vw;
+      }
+      &.tap-0{
+        background-color: #dbf7ce;
+        color: #30b01f;
+      }
+      &.tap-1{
+        background-color: #fdefef;
+      }
+      &.tap-2{
+        background-color: #f0f0f0;
+      }
+      &.select{
+        background-color: #e02e24;
+        color: #fff;
+      }
+    }
+  }
+  .evaluation-cell{
+    .za-cell__title{
+      padding: 10px 0;
+      .box-title{
+        font-size: 3.2vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: start;
+        align-items: center;
+        color: #0f0f0f;
+        margin-bottom: 5px;
+        img{
+          width: 6vw;
+          height: 6vw;
+          border-radius: 50%;
+          margin-right: 2vw;
+        }
+      }
+      .box-description{
+        font-size: 3vw;
+        color: #4f4f4f;
+        line-height: 5vw;
+      }
+    }
+  }
+}
+.popup-evaluate-list{
+  position: relative;
+  z-index: 0;
+  .popup-box{
+    width: 100vw;
+    height: calc(100vh - 15vw);
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    padding-top: 18vw;
+    .popup-roll-box{
+      width: 100%;
+      height: calc(100vh - 33vw);
+      position: absolute;
+      overflow-x: hidden;
+      overflow-y: auto;
+      .popup-evaluation-key-box{
+        position: relative;
+        border-bottom: 1px solid #e6e6e6;
+        background-color: #fff;
+        .open-shrink-but{
+          position: absolute;
+          width: 100%;
+          height: 4vw;
+          left: 0;
+          bottom: 0;
+          .icon{
+            width: 2.5vw;
+            height: 2.5vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+            position: absolute;
+            color: rgb(117, 117, 117);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .popup-evaluation-key{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: start;
+          align-items: center;
+          padding: 3vw;
+          box-sizing: border-box;
+          span{
+            padding: 0vw 2vw;
+            height: 6.5vw;
+            border-radius: 5px;
+            margin: 0 2vw 2vw 0;
+            font-size: 3vw;
+            color: #575151;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            svg.icon{
+              width: 3.5vw;
+              height: 3.5vw;
+              vertical-align: middle;
+              fill: currentColor;
+              overflow: hidden;
+              margin-right: 1vw;
+            }
+            &.tap-0{
+              background-color: #dbf7ce;
+              color: #30b01f;
+            }
+            &.tap-1{
+              background-color: #fdefef;
+            }
+            &.tap-2{
+              background-color: #f0f0f0;
+            }
+            &.select{
+              background-color: #e02e24;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .drop-down-state{
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 4.5vw;
+        color: #a6a6a6;
+      }
+    }
+  }
+}

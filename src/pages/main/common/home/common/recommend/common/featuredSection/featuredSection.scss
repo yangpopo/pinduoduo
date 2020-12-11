@@ -1,0 +1,57 @@
+.featured-section{
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2vw 3vw;
+  box-sizing: border-box;
+  .title-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    font-size: 4vw;
+    svg.icon{
+      width: 7vw;
+      height: 7vw;
+      margin:0 auto 1vw auto;
+    }
+    b{
+      color: #0c0c0c;
+      margin-bottom: 1vw;
+      font-size: 3.5vw;
+    }
+    i{
+      list-style: none;
+      color: #6e6e6e;
+      font-size: 3vw;
+    }
+  }
+  .dividing-line{
+    width: 1.2vw;
+  }
+  .commodity{
+    width: 15vw;
+    dt{
+      text-align: center;
+      margin-bottom: 0.5vw;
+      img{
+        width: 12vw;
+        height: 12vw;
+      }
+    }
+    dd{
+      text-align: center;
+      color: #f70f0b;
+      font-size: 3vw;
+      b{
+        font-size: 3.5vw;
+        margin-left: 0.5vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.game-set{
+  .am-grid-item-content{
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.2vw;
+    color: #4c4c4e;
+    position: relative;
+    svg.icon{
+      width: 5.5vw;
+      height: 5.5vw;
+      vertical-align: middle;
+      fill: currentColor;
+      overflow: hidden;
+      margin-bottom: 2vw;
+      color: #ec7f24;
+    }
+    .am-badge{
+      position: absolute;
+      top: 3vw;
+      right: 3vw;
+    }
+  }
+}

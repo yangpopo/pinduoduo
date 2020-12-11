@@ -1,0 +1,83 @@
+.user-box{
+  width: 100vw;
+  padding: 3vw 4vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  .user{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    a.user-image{
+      width: 15vw;
+      height: 15vw;
+      margin-right: 2vw;
+      img{
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+      }
+    }
+    dl {
+      dt{
+        margin-bottom: 2vw;
+        a{
+          font-size: 4vw;
+          color: #121214;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          font-weight: bold;
+          svg.icon {
+            width: 4.5vw;
+            height: 4.5vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+            margin-left: 1.5vw;
+          }
+        }
+      }
+      dd{
+        a{
+          font-size: 3vw;
+          color: #919191;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          svg.icon {
+            width: 3.5vw;
+            height: 3.5vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+            margin-right: 1vw;
+          }
+        }
+      }
+    }
+  }
+  .circle-link{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3.5vw;
+    padding: 1vw 3vw;
+    border: 1px solid #b2b0b5;
+    border-radius: 5vw;
+    color: #090909;
+    svg.icon{
+      width: 5vw;
+      height: 5vw;
+      margin-right: 1vw;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.dialogue{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 15px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .nav-bar-dialogue{
+    .news-bubble{
+      display: inline-block;
+      width: 6vw;
+      height: 6vw;
+      line-height: 7vw;
+      border-radius: 50%;
+      background-color: #dfdfdf;
+      font-size: 3.5vw;
+      color: #181818;
+      text-align: center;
+      margin-top: -3px;
+    }
+  }
+  .shop-but{
+    color: #4f4f4f;
+    svg.icon{
+      width: 7vw;
+      height: 7vw;
+      vertical-align: middle;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  }
+  .dialogue-box{
+    width: 100vw;
+    background-color: #f4f4f4;
+    height: calc(100% - 26.5vw);
+    position: relative;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 0;
+    .time-tab{
+      width: 100%;
+      font-size: 3vw;
+      color: #a0a0a0;
+      margin: 3vw 0;
+      text-align: center;
+    }
+  }
+  .dialogue-key-board{
+    flex-shrink: 0;
+  }
+}

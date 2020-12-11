@@ -1,0 +1,197 @@
+.search-icon-block-01{
+  width: 6vw;
+  height: 6vw;
+  .icon-search{
+    width: 6vw;
+    height: 6vw;
+    vertical-align: middle;
+    fill: currentColor;
+    overflow: hidden;
+    color: #0b0b0b;
+  }
+}
+
+.search-icon-block-02{
+  width: 100vw;
+  height: 100vh;
+  padding-top: 35px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  .search-types-02{
+    width: 100vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4vw;
+    .return-but{
+      width: 10vw;
+      height: 10vw;
+      position: relative;
+      svg.icon{
+        width: 4vw;
+        height: 4vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #929292;
+      }
+    }
+    .search-input-box{
+      background-color: #ededed;
+      height: 10vw;
+      border-radius: 2vw;
+      color: #a2a2a2;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      .menu-box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: #565656;
+        padding: 0 2vw;
+        position: relative;
+        border-right: 1px solid #d6d6d6;
+        margin-right: 2vw;
+        .title{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          color: #565656;
+          .icon{
+            width: 3.5vw;
+            height: 3.5vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+            margin-right: 1vw;
+          }
+        }
+        .menu{
+          position: absolute;
+          box-shadow: 0px 0px 11px 0px #00000054;
+          background-color: #fff;
+          padding: 1vw 0;
+          border-radius: 2vw;
+          top: 6vw;
+          z-index: 9;
+          span{
+            white-space: nowrap;
+            padding: 1.5vw 4vw;
+            display: block;
+            &:first-child{
+              border-bottom: 1px solid #ededed;
+            }
+          }
+        }
+      }
+      .input-box{
+        width: 46vw;
+        border: none;
+        background-color: transparent;
+        color: #595959;
+        margin-right: 2vw;
+        font-size: 4vw;
+      }
+      .icon-scan-code{
+        width: 6vw;
+        height: 6vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        margin-right: 2vw;
+      }
+    }
+    .search-but{
+      padding: 2vw;
+      color: #ce3025;
+      font-size: 4vw;
+    }
+  }
+  .search-keyword{
+    width: 100%;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    margin-bottom: 6vw;
+    .title-box{
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4vw;
+      .title{
+        color: #a7a7a7;
+        font-size: 3.5vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        svg.icon{
+          width: 3.5vw;
+          height: 3.5vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          margin-right: 1vw;
+        }
+      }
+      .but{
+        color: #c1c1c1;
+        svg.icon{
+          width: 4.5vw;
+          height: 4.5vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+        }
+      }
+    }
+    .search-box{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      a{
+        display: block;
+        font-size: 3.5vw;
+        background-color: #f8f8f8;
+        padding: 2vw 2.5vw;
+        color: #484848;
+        border-radius: 5vw;
+        margin: 0 1.5vw 1vw 0;
+      }
+      .more-but{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        color: #8f8f8f;
+        font-size: 3vw;
+        svg.icon{
+          width: 3vw;
+          height: 3vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

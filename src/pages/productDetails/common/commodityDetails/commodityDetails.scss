@@ -1,0 +1,84 @@
+.commodity-details{
+  background-color: #ffffff;
+  .commodity-details-title{
+    .za-cell__title{
+      padding: 10px 0;
+      font-size: 3.5vw;
+      color: #171717;
+    }
+    .za-cell__inner{
+      min-height: 35px;
+    }
+    .za-cell__content{
+      font-size: 3.5vw;
+      color: #151515;
+    }
+    .za-cell__footer{
+      font-size: 3vw;
+      color: #8c8c8c;
+    }
+  }
+  .detailed-box{
+    width: 95vw;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    padding: 1vw 3vw;
+    .detailed-info{
+      height: 6vw;
+      line-height: 6vw;
+      width: 100%;
+      font-size: 3vw;
+      color: #131313;
+      display: flex;
+      span{
+        color: #969696;
+        width: 25%;
+      }
+    }
+  }
+  .parameter-popup{
+    .parameter-box{
+      padding: 3vw;
+    }
+  }
+  .img-list-box{
+    width: 100%;
+    margin-top: 2vw;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+.commodity-popper{
+  box-shadow: 0 0 5px 0 #00000042;
+  border-radius: 5px;
+  overflow: hidden;
+  .za-cell__inner{
+    min-height: 35px;
+    padding: 0 10px;
+  }
+  .za-cell__title{
+    padding: 5px 0;
+  }
+  .help-link{
+    font-size: 3vw;
+    color: #a3a3a3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    svg.icon{
+      width: 4.5vw;
+      height: 4.5vw;
+      vertical-align: middle;
+      fill: currentColor;
+      overflow: hidden;
+      color: #8c8c8c;
+      margin-right: 5px;
+    }
+  }
+}
+

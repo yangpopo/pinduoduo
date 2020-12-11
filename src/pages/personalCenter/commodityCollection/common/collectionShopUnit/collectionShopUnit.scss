@@ -1,0 +1,31 @@
+.collection-shop-unit{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 2vw;
+  .shop-name{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1vw 2vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 3vw;
+    color: #3a3a3a;
+    img{
+      width: 5.5vw;
+      height: 5.5vw;
+      border-radius: 0.5vw;
+      margin-right: 1.5vw;
+    }
+    .icon{
+      width: 2vw;
+      height: 2vw;
+      vertical-align: middle;
+      fill: currentColor;
+      overflow: hidden;
+      margin-left: 1.5vw;
+      color: #868686;
+    }
+  }
+}

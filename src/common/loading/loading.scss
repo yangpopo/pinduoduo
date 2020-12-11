@@ -1,0 +1,15 @@
+.loading-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #9a9a9a;
+  border-top: none;
+  animation: loading-rotate 2s infinite;
+}
+@keyframes loading-rotate{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-360deg);}
+}

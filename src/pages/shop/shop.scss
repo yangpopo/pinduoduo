@@ -1,0 +1,153 @@
+.shop-box{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 15px;
+  background-color: #ffffff;
+  .shop-share{
+    margin-left: 3vw;
+  }
+  .shop-details{
+    background-color: #f4f4f4;
+    width: 100vw !important;
+    height: calc(100vh - 59px) !important;
+    .shop-up-downLoad{
+      overflow-y: auto;
+    }
+    .shop-head{
+      .head-portrait{
+        width: 16vw;
+        height: 16vw;
+        border-radius: 5px;
+      }
+      .za-cell__title, .za-cell__icon{
+        padding: 2vw 0;
+      }
+      .shop-info{
+        dt{
+          font-size: 4vw;
+          color: #141414;
+        }
+        .label{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: start;
+          span{
+            font-size: 3vw;
+            color: #df364d;
+            background-color: #fceeee;
+            padding:0 1vw;
+            height: 6vw;
+            line-height: 6vw;
+            box-sizing: border-box;
+          }
+        }
+        .collection{
+          color: #8a8a8a;
+          font-size: 3vw;
+        }
+      }
+      .shop-but{
+        display: flex;
+        flex-direction: column;
+        width: 16vw;
+        span{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          border: 1px solid #ee252d;
+          color: #ee252d;
+          justify-content: center;
+          padding: 1vw 1.5vw;
+          border-radius: 5px;
+          font-size: 3.5vw;
+          margin: 0.5vw 0;
+          svg.icon{
+            width: 3.5vw;
+            height: 3.5vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+            margin-right: 1vw;
+          }
+        }
+      }
+    }
+    .shop-evaluate{
+      .za-cell__inner{
+        min-height: 40px;
+        .za-cell__title{
+          padding: 5px 0;
+          font-size: 3.5vw;
+          span{
+            background-color: #fbefef;
+            color: #665a5a;
+            border-radius: 3px;
+            padding: 1vw;
+            margin-right: 1vw;
+          }
+        }
+      }
+    }
+
+    .commodity-box{
+      background-color: #fff;
+      width: 100vw;
+      text-align: center;
+      font-size: 3.5vw;
+      color: #df2e24;
+      padding: 3.5vw 0;
+      i{
+        display: inline-block;
+        background-color: #df2e24;
+        vertical-align: middle;
+        width: 6vw;
+        height: 6vw;
+        position: relative;
+        border-radius: 50%;
+        margin-right: 2vw;
+        svg.icon {
+          width: 4vw;
+          height: 4vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          color: #fff;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .the-end{
+      width: 100%;
+      height: 5vw;
+      line-height: 5vw;
+      text-align: center;
+      font-size: 3.5vw;
+      color: #8a8a8a;
+      position: relative;
+      margin: 5vw 0;
+      &:before{
+        content:" ";
+        position: absolute;
+        width: 90%;
+        height: 1px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #8a8a8a;
+      }
+      span{
+        position: absolute;
+        padding: 3vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f4f4f4;
+      }
+    }
+  }
+}

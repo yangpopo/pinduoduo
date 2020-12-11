@@ -1,0 +1,43 @@
+.vertical-menu{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  .vertical-menu-swiper{
+    background-color: #f8f8f8;
+    margin: 0;
+    width: 23vw;
+    .swiper-slide{
+      height: 14vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1a1a1a;
+      font-size: 3.5vw;
+      text-align: center;
+      padding: 1vw 0;
+      &.selected{
+        background-color: #fff;
+        position: relative;
+        color: #e22c29;
+        &:before{
+          content: " ";
+          display: block;
+          width: 4px;
+          height: 50%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background-color: #e22c29;
+        }
+      }
+    }
+  }
+  .mescroll-box{
+    width: 77vw;
+    height: auto;
+  }
+}

@@ -1,0 +1,113 @@
+.product-options{
+  .product-options-box{
+    width: 100%;
+    height: 60vh;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 2vw;
+    position: relative;
+    .head-img{
+      width: 25vw;
+      height: 25vw;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      position: absolute;
+      top: -4vh;
+    }
+    .head-info{
+      margin-left: 27vw;
+      width: 60vw;
+      height: 6.5vh;
+      dt{
+        color: #e02e24;
+        font-size: 3vw;
+        margin-bottom: 2vw;
+        b{
+          font-size: 4vw;
+          font-weight: normal;
+        }
+      }
+      dd{
+        font-size: 3vw;
+        color: #1b1b1b;
+      }
+    }
+    .close-but{
+      position: absolute;
+      right: 2vw;
+      top: 2vw;
+      width: 4vw;
+      height: 4vw;
+      svg.icon{
+        width: 4vw;
+        height: 4vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #d9d9d9;
+      }
+    }
+    .hr-line{
+      margin: 1.2vh 0;
+      border: none;
+      border-top: 1px solid #eeeeee;
+    }
+    .class-menu{
+      width: 100%;
+      height: 44vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      box-sizing: border-box;
+      padding-bottom: 3vw;
+    }
+    .class-box{
+      width: 100%;
+      h6.title{
+        font-size: 3vw;
+        font-weight: normal;
+        color: #101010;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .option-box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        span{
+          display: block;
+          font-size: 3vw;
+          background-color: #f4f4f4;
+          color: #141414;
+          padding: 2vw 3vw;
+          border-radius: 3px;
+          margin: 2vw 2vw 0 0;
+          &.select{
+            color: #fff;
+            background-color: #e02e24;
+          }
+          &.disable{
+            color: #d0d0d0;
+            background-color: #f8f8f8;
+          }
+        }
+      }
+    }
+    .submit-but{
+      position: absolute;
+      width: 100vw;
+      height: 6.3vh;
+      background-color: #e02e24;
+      font-size: 4vw;
+      color: #fff;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      line-height: 6.5vh;
+    }
+  }
+}

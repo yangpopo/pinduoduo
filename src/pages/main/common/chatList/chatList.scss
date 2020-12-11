@@ -1,0 +1,22 @@
+.chat-list-navbar{
+  border-bottom: 1px solid #d8d8d8;
+  padding-top: 25px;
+  box-sizing: content-box;
+}
+#chat-list-mescroll{
+  width: 100vw;
+  height: calc(100vh - 25px - 25vw);
+  .recent-box{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2vw;
+    background-color: #fff;
+    margin-bottom: 2vw;
+    .title-box{
+      font-size: 3.5vw;
+      font-weight: bold;
+      color: #1c1c1e;
+      margin-bottom: 2vw;
+    }
+  }
+}
