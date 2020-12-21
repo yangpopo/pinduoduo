@@ -4,8 +4,8 @@ import React, { Fragment, useState, useEffect } from 'react';
 import "./lineUpBox.scss";
 import { Cell, Button, Popup } from 'zarm';
 import { connect } from "react-redux"; // 链接全局状态
-import { productOptionsPopupStateFun } from "../../../../store/global/";
-import ProductOptions from "common/productOptions/ProductOptions"; // 弹窗状态
+import { productOptionsPopupStateFun } from "../../../../store/global/"; // 弹窗状态
+import ProductOptions from "common/productOptions/ProductOptions"; // 商品选择弹窗
 
 import Swiper from "swiper";
 import "../../../../../node_modules/swiper/dist/css/swiper.min.css";
@@ -172,7 +172,7 @@ const LineUpBox = (props) => {
             </div>
           </div>
       </Popup>
-      <ProductOptions type={ productOptionsType } />
+      <ProductOptions type="collage" />
     </div>
   )
 }

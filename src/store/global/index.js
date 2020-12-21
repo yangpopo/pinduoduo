@@ -7,7 +7,7 @@ export const MODIFY_MAIN_MENU_STATUS = "MODIFY_MAIN_MENU_STATUS";
 // 商品选项弹窗状态
 export const productOptionsPopupStateFun = () => {
     return{
-        type: MODIFY_MAIN_MENU_STATUS,
+        type: PRODUCT_OPTIONS_POPUP_STATE,
     }
 }
 

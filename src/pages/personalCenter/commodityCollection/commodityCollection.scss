@@ -7,4 +7,10 @@
   .collection-navbar{
     border-bottom: 1px solid #d8d8d8;
   }
+  .commodity-collection-mescroll{
+    width: 100%;
+    height: calc(100% - 14vw - 44px);
+    overflow-y: auto;
+    background-color: #f4f4f4;
+  }
 }

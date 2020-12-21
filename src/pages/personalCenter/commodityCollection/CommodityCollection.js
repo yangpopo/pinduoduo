@@ -6,6 +6,9 @@ import { NavBar, Icon } from "zarm";
 import { useHistory } from "react-router-dom";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 import CollectionShopUnit from "./common/collectionShopUnit/CollectionShopUnit"; // 收藏店铺单元
+import SearchBlock from "./common/searchBlock/SearchBlock"; // 结算模块
+import TotalBlock from "./common/totalBlock/TotalBlock"; // 结算模块
+import BatchBlock from "./common/batchBlock/BatchBlock"; // 管理模块
 
 const CommodityCollection = (props) => {
   let history = useHistory();
@@ -25,6 +28,8 @@ const CommodityCollection = (props) => {
     }
   }
 
+  const [totalOrAdmin, setTotalOrAdmin] = useState(true);
+
   return(<div className="commodity-collection">
     <NavBar
       className="collection-navbar"
@@ -38,12 +43,17 @@ const CommodityCollection = (props) => {
       </Fragment>}
       title="商品收藏"
       right={<Fragment>
-        <div>管理</div>
+        { totalOrAdmin && <SearchBlock />}
+        <div onClick={() => {setTotalOrAdmin((val) => {return !val})}}>{totalOrAdmin ? "管理":"完成"}</div>
       </Fragment>}
     />
     <UpDownLoad id="commodity-collection-mescroll" className="commodity-collection-mescroll" getAjaxData={getAjaxData}>
         <CollectionShopUnit />
+        <CollectionShopUnit />
     </UpDownLoad>
+    {
+      totalOrAdmin ? <TotalBlock /> : <BatchBlock />
+    }
   </div>)
 }
 

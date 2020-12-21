@@ -15,6 +15,7 @@ const Dialogue = React.lazy(() => import('./pages/dialogue/Dialogue')); // 聊�
 const MyOrder = React.lazy(() => import('./pages/personalCenter/myOrder/MyOrder')); // 个人中心-我的订单
 const CouponManage = React.lazy(() => import('./pages/personalCenter/couponManage/CouponManage')); // 个人中心-优惠券
 const CommodityCollection = React.lazy(() => import('./pages/personalCenter/commodityCollection/CommodityCollection')); // 个人中心-商品收藏
+const ShopFollow = React.lazy(() => import('./pages/personalCenter/shopFollow/ShopFollow')); // 个人中心-店铺关注
 
 
 
@@ -73,6 +74,13 @@ function App() {
         render={props => 
           <Suspense fallback={<Loading/>}>
             <CommodityCollection {...props} />
+          </Suspense>
+        }
+       />
+       <Route exact cacheKey="shopFollow" path="/shop-follow"
+        render={props => 
+          <Suspense fallback={<Loading/>}>
+            <ShopFollow {...props} />
           </Suspense>
         }
        />

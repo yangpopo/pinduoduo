@@ -1,0 +1,46 @@
+.total-block{
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #eeeeee;
+  background-color: #ffffff;
+  height: 14vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  .total-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw;
+    box-sizing: border-box;
+    width: 70%;
+    dt{
+      font-size: 3vw;
+      color: #b0b0b0;
+    }
+    dd{
+      font-size: 3.5vw;
+      color: #515151;
+      b{
+        font-size: 4vw;
+        color: #e83530;
+        margin-left: 1vw;
+        font-weight: normal;
+      }
+    }
+  }
+  .check-but{
+    width: 30%;
+    font-size: 3.5vw;
+    background-color: #e83530;
+    color: #ffffff;
+    text-align: center;
+    line-height: 14vw;
+  }
+}
