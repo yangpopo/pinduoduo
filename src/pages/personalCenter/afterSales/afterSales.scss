@@ -1,0 +1,35 @@
+.after-sales{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 15px;
+  background-color: #fff;
+  .after-sales-navbar{
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .after-sales-mescroll{
+    width: 100%;
+    height: calc(100% - 45px);
+    overflow-y: auto;
+    background-color: #f4f4f4;
+    .after-sales-list{
+      width: 100%;
+      height: auto;
+    }
+    .after-sales-none{
+      width: 100%;
+      height: auto;
+      text-align: center;
+      color: #545454;
+      .icon-none{
+        width: 25vw;
+        height: 25vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        margin: 30vw auto 3vw auto;
+        color: #d0d0d0;
+      }
+    }
+  }
+}

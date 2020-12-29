@@ -9,14 +9,22 @@ import { Link, useHistory } from "react-router-dom";
 const OrderList = (props) => {
   const moreMenuDom = React.createRef();
   // 更多菜单获取焦点
-  const getFocusMore = () => {
-    moreMenuDom.current.style.display = "block";
+  const getFocusMore = (event) => {
+    event.persist();
+    try {
+      event.target.children[0].style.display = "block";
+    } catch(e) {
+    }
   }
 
   // 更多菜单失去焦点
-  const getBlurMore = () => {
+  const getBlurMore = (event) => {
+    event.persist();
     setTimeout(() => {
-      moreMenuDom.current.style.display = "none";
+      try {
+        event.target.children[0].style.display = "none";
+      } catch(e) {
+      }
     }, 100)
   }
 
@@ -104,18 +112,18 @@ const OrderList = (props) => {
           </div>
           <div className="operate-info">
             <div className="operate-box">
-              <button onFocus={ getFocusMore } onBlur={ getBlurMore } className="more-but">更多
+              <button onFocus={ (e) => { getFocusMore(e) } } onBlur={ (e) => { getBlurMore(e) } } className="more-but">更多
                 <ul ref={ moreMenuDom } className="menu-box">
                   <li><Link to="/">再次购买</Link></li>
                   <li><Link to="/">延长收货</Link></li>
                 </ul>
               </button>
-              <Link className="link-but" to="/">申请退款</Link>
-              <Link className="link-but" to="/">查看物流</Link>
+              <Link className="link-but" to="/apply-select-after-sales/1">申请退款</Link>
+              <Link className="link-but" to="/logistics-information/0">查看物流</Link>
               <div className="confirm-but">确认收货</div>
             </div>
             <div className="info-box">
-              <Link to="/" className="box">
+              <Link to="/logistics-information/0" className="box">
                 <svg className="icon-express" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="19143"><path d="M96.50176 519.31136c0.14336-4.34176 1.45408-8.6016 3.8912-12.24704l131.21536-196.89472c4.32128-6.41024 11.63264-10.30144 19.39456-10.30144H428.35968c12.86144 0 23.28576 10.4448 23.28576 23.30624v379.61728c0 12.84096-10.4448 23.28576-23.32672 23.28576h-47.69792a106.53696 106.53696 0 0 1-213.13536 0h-47.7184a23.3472 23.3472 0 0 1-23.30624-23.30624V519.9872l0.04096-0.67584z m248.56576-6.3488v-142.09024H255.1808l-94.74048 142.09024h184.60672zM274.0224 779.30496a53.32992 53.32992 0 0 0 53.28896-53.248 53.3504 53.3504 0 0 0-53.28896-53.28896 53.3504 53.3504 0 0 0-53.248 53.26848 53.32992 53.32992 0 0 0 53.248 53.26848z m244.03968-550.5024h399.85152c17.08032 0 30.9248 13.84448 30.9248 30.9248V695.0912a30.9248 30.9248 0 0 1-30.9248 30.94528H842.3424a106.53696 106.53696 0 0 1-106.55744 106.53696 106.53696 106.53696 0 0 1-106.55744-106.53696h-111.12448a30.9248 30.9248 0 0 1-30.9248-30.9248v-435.4048c0-17.05984 13.824-30.9248 30.9248-30.9248z m217.7024 550.5024a53.32992 53.32992 0 0 0 53.248-53.248 53.3504 53.3504 0 0 0-53.248-53.28896 53.37088 53.37088 0 0 0-53.30944 53.26848 53.32992 53.32992 0 0 0 53.28896 53.26848z" p-id="19144"></path></svg>
                 { item.expressInfo.name }
                 { item.expressInfo.info }

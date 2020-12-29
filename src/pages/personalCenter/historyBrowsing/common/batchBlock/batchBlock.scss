@@ -1,0 +1,32 @@
+.batch-block{
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #eeeeee;
+  background-color: #ffffff;
+  height: 14vw;
+  transition: margin 0.5s;
+  margin-bottom: -15vw;
+  .select-but{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+  }
+  .delete-but{
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    width: 30%;
+    font-size: 3.5vw;
+    background-color: #e83530;
+    color: #ffffff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 2.5vw 0;
+    border-radius: 5px;
+  }
+}

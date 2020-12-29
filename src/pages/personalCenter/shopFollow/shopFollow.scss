@@ -13,7 +13,7 @@
     background-color: #f4f4f4;
     .follow-box{
       width: 100%;
-      padding: 1.5vw;
+      padding: 2vw;
       box-sizing: border-box;
       margin-bottom: 2vw;
       background-color: #fff;
@@ -27,9 +27,54 @@
         align-items: center;
         b.title{
           font-size: 3.5vw;
+          font-weight: normal;
           color: #252525;
         }
-
+        .link{
+          font-size: 3vw;
+          color: #999999;
+          .icon{
+            width: 3vw;
+            height: 3vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+          }
+        }
+      }
+      .shop-content-box{
+        display: flex;
+      }
+      .time-box{
+        width: 100%;
+        padding: 2vw 0;
+        font-size: 3vw;
+        text-align: center;
+        position: relative;
+        height: 3vw;
+        margin: 3vw 0;
+        &:before{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 0;
+          width: 55%;
+          height: 1px;
+          background-color: #d4d4d4;
+        }
+        span{
+          color: #989898;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          background-color: #fff;
+          padding: 0 2vw;
+        }
       }
     }
   }

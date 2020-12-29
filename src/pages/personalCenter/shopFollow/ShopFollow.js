@@ -5,6 +5,8 @@ import "./shopFollow.scss";
 import { NavBar, Icon } from "zarm";
 import { Link, useHistory } from "react-router-dom";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
+import ShopUnit from "./common/shopUnit/ShopUnit"; // 店铺关注-店铺
+import ShopInfoUnit from "./common/shopInfoUnit/ShopInfoUnit"; // 店铺关注-店铺
 
 const ShopFollow = () => {
   let history = useHistory();
@@ -42,8 +44,23 @@ const ShopFollow = () => {
       <div class="follow-box">
         <div className="title-box">
           <b className="title">我的关注</b>
-          <Link to="/">查看全部</Link>
+          <Link className="link" to="/my-follow">查看全部<svg className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4010"><path d="M357.376 852.309333a25.6 25.6 0 0 0 36.181333 36.181334l358.4-358.4a25.6 25.6 0 0 0 0-36.181334l-358.4-358.4a25.6 25.6 0 0 0-36.181333 36.181334L697.685333 512l-340.309333 340.309333z" p-id="4011"></path></svg></Link>
         </div>
+        <div className="shop-content-box">
+          <ShopUnit />
+          <ShopUnit />
+          <ShopUnit />
+        </div>
+      </div>
+
+      {/* 关注动态 */}
+      <div class="follow-box">
+        <div className="title-box">
+          <b className="title">关注动态</b>
+        </div>
+        <div className="time-box"><span>12月21日</span></div>
+        <ShopInfoUnit />
+        <ShopInfoUnit />
       </div>
     </UpDownLoad>
   </div>)

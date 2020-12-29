@@ -1,0 +1,142 @@
+.my-follow{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 15px;
+  background-color: #fff;
+  .my-follow-navbar{
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .my-follow-mescroll{
+    width: 100%;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+    .follow-box{
+      width: 100%;
+      padding: 2vw;
+      box-sizing: border-box;
+      margin-bottom: 2vw;
+      background-color: #fff;
+      position: relative;
+      .screen-box{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        background-color: #000000b8;
+        left: 0;
+        .menu-box{
+          background-color: #fff;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          padding: 2vw;
+          li{
+            min-width: 5vw;
+            padding: 2.5vw;
+            border-radius: 5px;
+            font-size: 3vw;
+            text-align: center;
+            background-color: #f1f1f1;
+            margin: 0 2vw 2vw 0;
+            position: relative;
+            .check-mark{
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              background-color: #dd2f24;
+              border-radius: 5px 0px 5px 0px;
+              width: 3.5vw;
+              height: 3vw;
+              display: none;
+              svg.icon{
+                width: 2vw;
+                height: 2vw;
+                vertical-align: middle;
+                fill: currentColor;
+                overflow: hidden;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+            &.select{
+              color: #dd2f24;
+              background-color: #ffebea;
+              .check-mark{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .title-box{
+        width: 100%;
+        margin-bottom: 2vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        b.title{
+          font-size: 3.5vw;
+          font-weight: normal;
+          color: #252525;
+        }
+        .screen-but{
+          font-size: 3.5vw;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          color: #181818;
+          svg.icon{
+            width: 4vw;
+            height: 4vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+            margin-right: 1vw;
+          }
+        }
+      }
+      
+      .shop-content-box{
+        display: flex;
+      }
+      .time-box{
+        width: 100%;
+        padding: 2vw 0;
+        font-size: 3vw;
+        text-align: center;
+        position: relative;
+        height: 3vw;
+        margin: 3vw 0;
+        &:before{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 0;
+          width: 55%;
+          height: 1px;
+          background-color: #d4d4d4;
+        }
+        span{
+          color: #989898;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          background-color: #fff;
+          padding: 0 2vw;
+        }
+      }
+    }
+  }
+}

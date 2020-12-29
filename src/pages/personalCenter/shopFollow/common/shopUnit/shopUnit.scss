@@ -1,0 +1,61 @@
+.shop-unit{
+  width: 18vw;
+  margin-right: 2.5vw;
+  display: block;
+  .head-img{
+    width: 100%;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2.5vw;
+    img{
+      width: 18vw;
+      height: 18vw;
+    }
+    .title{
+      background-color: #39393b;
+      color: #fff;
+      font-size: 3vw;
+      padding: 1vw 1.5vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+    }
+    .state{
+      width: 100%;
+      background-color: #e42c24;
+      position: absolute;
+      font-size: 3vw;
+      color: #fff;
+      left: 0;
+      bottom: 0;
+      padding: 1vw 0.5vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      .icon{
+        width: 3vw;
+        height: 3vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #fff;
+        margin-right: 1vw;
+      }
+    }
+  }
+  .name-box{
+    font-size: 3.5vw;
+    color: #2a2a2a;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+  }
+}

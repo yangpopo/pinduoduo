@@ -1,0 +1,64 @@
+.commodity-unit{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-bottom: 2vw;
+  .commodity-unit-check{
+    margin: 13vw 4vw 0 4vw;
+    flex-shrink: 0;
+    transition: margin 0.5s;
+  }
+  .head-img{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 3px;
+    flex-shrink: 0;
+    display: block;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .info-box{
+    width: 100%;
+    margin-left: 2vw;
+    border-bottom: 1px solid #f1f1f1;
+    .name{
+      display: block;
+      height: 10vw;
+      font-size: 3.5vw;
+      line-height: 5vw;
+      color: #212121;
+      margin-bottom: 2vw;
+    }
+    .label-box{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-bottom: 2vw;
+      span{
+        background-color: #fdf3ea;
+        color: #db5937;
+        padding: .5vw;
+        border-radius: 3px;
+        margin-right: 2vw;
+        font-size: 3vw;
+      }
+    }
+    .sales-volume{
+      font-size: 3.5vw;
+      color: #959595;
+      margin-bottom: 3vw;
+    }
+    .price{
+      color: #ed263d;
+      font-size: 3.5vw;
+      b{
+        font-size: 4.5vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.apply-after-sales{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 15px;
+  background-color: #fff;
+  .apply-after-sales-navbar{
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .apply-after-sales-box{
+    width: 100%;
+    background-color: #f4f4f4;
+    padding-bottom: 3vw;
+    .service-explain{
+      background-color: #f7fbfe;
+      .za-cell__inner{
+        min-height: 8vw;
+      }
+      .za-cell__title{
+        padding: 0;
+        font-size: 3.5vw;
+        color: #1e91e4;
+      }
+      .za-cell__arrow:after{
+        border-color: #d6e5e8;
+      }
+    }
+    .option-box{
+      .za-cell__title{
+        width: 20vw;
+        font-size: 4vw;
+        color: #535353;
+      }
+      .za-cell__content{
+        .za-input__content{
+          color: #1b1b1b;
+          font-size: 4vw;
+        }
+      }
+    }
+    .price-box{
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #fff;
+      .title-box{
+        padding: 3vw 4vw;
+        width: 100%;
+        font-size: 4vw;
+        color: #565656;
+      }
+      .input-box{
+        font-size: 6vw;
+        display: flex;
+        padding: 2vw 4vw;
+        .input{
+          margin-left: 2vw;
+        }
+      }
+      .info-box{
+        font-size: 3vw;
+        padding: 4vw;
+        background-color: #f9f9f9;
+        color: #959595;
+      }
+    }
+    .describe-box{
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #fff;
+      padding: 3vw 4vw;
+      .title-box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 3vw;
+        .title{
+          font-size: 4vw;
+          color: #565656;
+        }
+        .describe{
+          font-size: 3.5vw;
+          color: #9a9a9a;
+        }
+      }
+      .describe-content{
+        min-height: 30vw;
+      }
+    }
+    .file-but{
+      width: 23vw;
+      height: 23vw;
+      border: 1px dashed #dbdbdb;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 3.5vw;
+      color: #969696;
+      .icon-camera{
+        width: 10vw;
+        height: 10vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #9b9b9b;
+        margin-bottom: 2vw;
+      }
+    }
+    .submit-but{
+      width: 90%;
+      margin: 0 auto;
+      background-color: #e02e24;
+      font-size: 3.5vw;
+      text-align: center;
+      padding: 4vw 0;
+      color: #fff;
+      border-radius: 5px;
+      margin-bottom: 50vw;
+    }
+  }
+}

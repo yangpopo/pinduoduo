@@ -1,0 +1,94 @@
+.apply-select-after-sales{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 15px;
+  background-color: #fff;
+  .apply-select-after-sales-navbar{
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .apply-select-after-sales-box{
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #f4f4f4;
+    .order-describe{
+      width: 100%;
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 2.5vw 4vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      margin-bottom: 3vw;
+      img{
+        width: 14vw;
+        height: 14vw;
+        border-radius: 3px;
+      }
+      .order-info{
+        width: calc(100% - 16vw);
+        margin-left: 2vw;
+        font-size: 4vw;
+        dt{
+          width: 100%;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap;
+          color: #060606;
+          margin-bottom: 6vw;
+        }
+        dd{
+          width: 100%;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap;
+          color: #9c9c9c;
+        }
+      }
+    }
+    .refund-option{
+      width: 90%;
+      padding: 8vw 5vw;
+      box-sizing: border-box;
+      border-radius: 5px;
+      margin: 0 auto 5vw auto;
+      background-color: #fff;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      align-items: flex-start;
+      svg.icon{
+        width: 6vw;
+        height: 6vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #d36558;
+      }
+      dl.option-info{
+        margin-left: 2vw;
+        width: 81%;
+        dt{
+          color: #1e1e1e;
+          font-size: 5vw;
+          margin-bottom: 3vw;
+        }
+        dd{
+          color: #999999;
+          font-size: 3.5vw;
+        }
+      }
+      svg.icon-arrow{
+        width: 5vw;
+        height: 5vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #dcdcdc;
+        margin-top: 4%;
+      }
+    }
+  }
+}

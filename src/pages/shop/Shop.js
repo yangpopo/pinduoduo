@@ -18,12 +18,9 @@ import PictureInfoList02 from "assets/img/picture/picture-info-list-02.jpg";
 import PictureInfoList03 from "assets/img/picture/picture-info-list-03.jpg";
 import PictureInfoList04 from "assets/img/picture/picture-info-list-04.jpg";
 
-
-
 const Shop = (props) => {
   let history = useHistory();
   // 上拉加载-下拉刷新---加载数据
-  console.log("5456566546")
   const getAjaxData = (page, obj) => {
     if (page === undefined) {
       obj.resetUpScroll();
@@ -96,7 +93,7 @@ const Shop = (props) => {
     }
   });
 
-  return (<div className="shop-box">
+  return (<div className="shop-page-box">
     <NavBar
       left={
         <Icon 
