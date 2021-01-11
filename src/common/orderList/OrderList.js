@@ -30,8 +30,8 @@ const OrderList = (props) => {
 
   let history = useHistory();
   // 点击跳转跳转
-  const linkGoGoodsClick = () => {
-    history.push("/product-details/0");
+  const linkGoGoodsClick = (orderId) => {
+    history.push("/order-details/" + orderId);
   }
 
   // 价格转化

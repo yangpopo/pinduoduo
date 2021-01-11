@@ -1,0 +1,360 @@
+.order-details{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 15px;
+  background-color: #fff;
+  .order-details-navbar{
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .order-details-mescroll{
+    width: 100%;
+    height: calc(100% - 45px);
+    overflow-y: auto;
+    background-color: #f4f4f4;
+    .express-info{
+      width: 100%;
+      background-color: #fff;
+      padding: 3vw 3.5vw;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      align-items: center;
+      border-bottom: 1px solid #fafafa;
+      .icon-express{
+        width: 6vw;
+        height: 6vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #409d35;
+        margin: 0 3vw;
+      }
+      .info{
+        width: 82%;
+        dt{
+          font-size: 3.5vw;
+          color: #409d35;
+          margin-bottom: 2vw;
+        }
+        dd{
+          font-size: 3vw;
+          color: #9f9f9f;
+        }
+      }
+      .icon-arrow{
+        width: 5vw;
+        height: 5vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #afafaf;
+      }
+    }
+    .address-info{
+      width: 100%;
+      background-color: #fff;
+      padding: 3vw 3.5vw;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      align-items: center;
+      .icon-address{
+        width: 6vw;
+        height: 6vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #c43b35;
+        margin: 0 3vw;
+      }
+      .info{
+        width: auto;
+        color: #4b4b4b;
+        font-size: 3.5vw;
+        dt{
+          margin-bottom: 2vw;
+        }
+      }
+      .more-but{
+        font-size: 3.5vw;
+        color: #afafaf;
+        white-space: nowrap;
+        flex-shrink: 0;
+        svg.icon{
+          width: 5vw;
+          height: 5vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          color: #afafaf;
+          margin-left: 0.5vw;
+          line-height: 4.5vw;
+        }
+      }
+    }
+    .order-info{
+      width: 100%;
+      background-color: #fff;
+      .head-box{
+        width: 100%;
+        padding: 2vw 3vw;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .head{
+          font-size: 3.5vw;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          color: #141414;
+          img{
+            width: 6.5vw;
+            height: 6.5vw;
+            border-radius: 1vw;
+            margin-right: 2vw;
+          }
+          .icon{
+            width: 4vw;
+            height: 4vw;
+            vertical-align: middle;
+            fill: currentColor;
+            overflow: hidden;
+            margin-left: 0.5vw;
+            color: #686868;
+          }
+        }
+      }
+      .product-box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 2vw 3vw;
+        box-sizing: border-box;
+        .product-head{
+          width: 23vw;
+          height: 23vw;
+          border-radius: 1vw;
+          margin-right: 2vw;
+          flex-shrink: 0;
+        }
+        .info-box{
+          width: auto;
+          border: none;
+          margin-right: 2vw;
+          li{
+            &.name{
+              font-size: 3.5vw;
+              font-weight: bold;
+              color: #111111;
+              line-height: 4.5vw;
+              margin-bottom: 2vw;
+            }
+            &.parameter{
+              font-size: 3vw;
+              color: #9c9c9c;
+              line-height: 4.5vw;
+              margin-bottom: 2.5vw;
+            }
+            &.label{
+              span{
+                background-color: #1dbb06;
+                padding: 0.5vw;
+                border-radius: 2px;
+                color: #fff;
+                font-size: 3.5vw;
+              }
+            }
+          }
+        }
+        .price{
+          text-align: right;
+          dt{
+            font-size: 3.5vw;
+            color: #161616;
+            margin-bottom: 2vw;
+          }
+          dd{
+            font-size: 3vw;
+            color: #9c9c9c;
+          }
+        }
+      }
+      .operate-but{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2.5vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        border-bottom: 1px solid #f3f3f3;
+        a{
+          border: 1px solid #adadad;
+          border-radius: 5px;
+          font-size: 4vw;
+          padding: 1.5vw;
+          margin-left: 2vw;
+          color: #151515;
+          display: flex;
+          align-items: center;
+          &.service-but{
+            svg.icon-chat{
+              width: 5vw;
+              height: 5vw;
+              vertical-align: middle;
+              fill: currentColor;
+              overflow: hidden;
+              margin-right: 1vw;
+              color: #409d35;
+            }
+          }
+          &.efund-but{
+            border-color: #ea3430;
+            color: #ea3430;
+          }
+          
+        }
+      }
+      .additional-info{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 3vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .info-box{
+        color: #575757;
+        font-size: 3vw;
+      }
+      .price-box{
+        color: #575757;
+        font-size: 3.5vw;
+        b{
+          color: #c53a35;
+          font-size: 4vw;
+          em{
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+    .compose-box{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 3vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      .title{
+        font-size: 4vw;
+        color: #0e0e0e;
+      }
+      .member-box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        border-left: 1px solid #d5d5d5;
+        .member-unit{
+          width: 6vw;
+          height: 6vw;
+          border-radius: 50%;
+          overflow: hidden;
+          position: relative;
+          margin-left: 2vw;
+          &:nth-child(2){
+            .number{
+              position: absolute;
+              background-color: #00000059;
+              width: 6vw;
+              height: 6vw;
+              top: 0;
+              left: 0;
+              b{
+                position: absolute;
+                font-size: 3vw;
+                color: #fff;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: normal;
+              }
+            }
+          }
+          img{
+            width: 6vw;
+            height: 6vw;
+          }
+        }
+        .icon-arrow{
+          width: 5vw;
+          height: 5vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          color: #d5d5d5;
+          margin-left: 2vw;
+        }
+      }
+    }
+    .explain-info{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 3vw;
+      background-color: #fff;
+      h6.title{
+        font-size: 4vw;
+        color: #090909;
+        margin-bottom: 2vw;
+      }
+      p{
+        font-size: 3vw;
+        line-height: 4.5vw;
+        color: #4e4e4e;
+      }
+    }
+    .order-detailed{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 3vw;
+      background-color: #fff;
+      li{
+        margin-bottom: 3vw;
+        color: #9c9c9c;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        &:last-of-type{
+          margin-bottom: 0vw;
+        }
+        .operate-but{
+          font-size: 3vw;
+          padding: 1vw;
+          border: 1px solid #9c9c9c;
+          border-radius: 3px;
+          color: #0b0b0b;
+        }
+      }
+    }
+  }
+}

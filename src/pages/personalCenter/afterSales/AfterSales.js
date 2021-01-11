@@ -71,7 +71,6 @@ const AfterSales = () => {
             <div className="name">暂无退款/售后订单</div>
           </div>
         }
-        
       </Tabs>
     </UpDownLoad>
   </div>)

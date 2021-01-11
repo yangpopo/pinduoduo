@@ -13,6 +13,7 @@ const ConfirmOrder = React.lazy(() => import('./pages/confirmOrder/ConfirmOrder'
 const Shop = React.lazy(() => import('./pages/shop/Shop')); // 店铺
 const Dialogue = React.lazy(() => import('./pages/dialogue/Dialogue')); // 聊天
 const MyOrder = React.lazy(() => import('./pages/personalCenter/myOrder/MyOrder')); // 个人中心-我的订单
+const OrderDetails = React.lazy(() => import('./pages/personalCenter/orderDetails/OrderDetails')); // 个人中心-订单详情
 const CouponManage = React.lazy(() => import('./pages/personalCenter/couponManage/CouponManage')); // 个人中心-优惠券
 const CommodityCollection = React.lazy(() => import('./pages/personalCenter/commodityCollection/CommodityCollection')); // 个人中心-商品收藏
 const ShopFollow = React.lazy(() => import('./pages/personalCenter/shopFollow/ShopFollow')); // 个人中心-店铺关注
@@ -23,6 +24,7 @@ const RefundDetails = React.lazy(() => import('./pages/personalCenter/afterSales
 const ApplySelectAfterSales = React.lazy(() => import('./pages/personalCenter/applySelectAfterSales/ApplySelectAfterSales')); // 个人中心-申请售后选择
 const ApplyAfterSales = React.lazy(() => import('./pages/personalCenter/applyAfterSales/ApplyAfterSales')); // 个人中心-申请售后
 const LogisticsInformation = React.lazy(() => import('./pages/personalCenter/logisticsInformation/LogisticsInformation')); // 个人中心-物流信息
+const SetUp = React.lazy(() => import('./pages/personalCenter/setUp/SetUp')); // 个人中心-设置
 
 
 
@@ -140,8 +142,20 @@ function App() {
           </Suspense>
         }
        />
-
-
+       <Route exact cacheKey="OrderDetails" path="/order-details/:id"
+        render={props => 
+          <Suspense fallback={<Loading/>}>
+            <OrderDetails {...props} />
+          </Suspense>
+        }
+       />
+      <Route exact cacheKey="SetUp" path="/set-up"
+        render={props => 
+          <Suspense fallback={<Loading/>}>
+            <SetUp {...props} />
+          </Suspense>
+        }
+       />
     </CacheSwitch>
   );
 }

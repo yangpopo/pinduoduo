@@ -65,7 +65,7 @@ const Favorites = () => {
     text: "设置",
     newNews: 1,
     id: 4,
-    routingPath:"/ghjrtyg"
+    routingPath:"/set-up"
   }];
 
   return (<Grid data={Favorites} columnNum={5} hasLine={false} 

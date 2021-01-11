@@ -4,6 +4,37 @@
   box-sizing: border-box;
   padding-top: 15px;
   background-color: #fff;
+  position: relative;
+  .operate-box{
+    position: fixed;
+    background-color: #fff;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3vw 4vw;
+    border-top: 1px solid #f6f6f6;
+    span.default-but{
+      font-size: 3.5vw;
+      padding: 2vw;
+      border: 1px solid #b0b0b0;
+      border-radius: 3px;
+      background-color: #fff;
+      color: #1b1b1b;
+    }
+    span.important-but{
+      font-size: 3.5vw;
+      padding: 2vw;
+      border: 1px solid #e32d22;
+      border-radius: 3px;
+      background-color: #e32d22;
+      color: #fff;
+      margin-left: 2vw;
+    }
+  }
   .logistics-information-navbar{
     border-bottom: 1px solid #d8d8d8;
     .icon-shop-but{
@@ -17,7 +48,7 @@
   }
   .logistics-information-mescroll{
     width: 100%;
-    height: calc(100% - 45px);
+    height: calc(100% - 95px);
     overflow-y: auto;
     background-color: #f4f4f4;
     .express-info{
@@ -200,6 +231,74 @@
           margin-left: 2vw;
         }
       }
+    }
+    .more-goods{
+      width: 100%;
+      .title-box{
+        background-color: #fff;
+        text-align: center;
+        padding: 3vw 0vw;
+        color: #de2f04;
+        font-size: 3.5vw;
+        .icon{
+          width: 4.5vw;
+          height: 4.5vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          color: #de2f04;
+          vertical-align: middle;
+          margin-right: 1vw;
+        }
+      }
+    }
+  }
+  .logistics-information-popup{
+    background-color: #f4f4f4;
+    .content-box{
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+      h6{
+        width: 100%;
+        padding: 4vw 0;
+        font-size: 4vw;
+        color: #000000;
+      }
+      i{
+        width: 12vw;
+        height: 12vw;
+        background-color: #f4f4f4;
+        position: relative;
+        display: inline-block;
+        border-radius: 50%;
+        margin-bottom: 2vw;
+        svg.icon{
+          width: 8vw;
+          height: 8vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #1dab19;
+        }
+      }
+      div{
+        font-size: 3vw;
+        color: #1a1a1a;
+        padding-bottom: 5vw;
+      }
+    }
+    .cancel-but{
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+      font-size: 3.5vw;
+      color: #000;
+      padding: 4.5vw 0;
     }
   }
 }
