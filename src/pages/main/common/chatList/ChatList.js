@@ -201,7 +201,6 @@ class ChatList extends React.Component {
       <NavBar
         mode="light"
         className="chat-list-navbar"
-        icon={<Icon type="left" color="#868480" />}
       >聊天</NavBar>
       <div id="chat-list-mescroll" className="mescroll">
         <div className="recent-box">

@@ -2,11 +2,13 @@
 
 import React, { Fragment } from 'react';
 import "./couponBox.scss";
+import { useHistory } from "react-router-dom"; // 路由
 
 const CouponBox = (props) => {
   // 点击跳转跳转
-  const linkGoClick = () => {
-    props.history.replace("/coupon-center/");
+  let history = useHistory();
+  const linkGoClick = (val) => {
+    history.push("/coupon-center/");
   }
 
   return (<div className="coupon-box" onClick={linkGoClick}>

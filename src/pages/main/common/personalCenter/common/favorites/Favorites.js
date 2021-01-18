@@ -3,11 +3,13 @@
 import React, { Fragment } from 'react';
 import "./favorites.scss";
 import { Grid, Badge } from 'antd-mobile';
+import { useHistory } from "react-router-dom"; // 路由
 
 const Favorites = (props) => {
   // 点击跳转跳转
+  let history = useHistory();
   const linkGoClick = (val) => {
-    props.history.replace(val.routingPath);
+    history.push(val.routingPath);
   }
 
   const Favorites = [{

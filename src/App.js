@@ -27,6 +27,7 @@ const LogisticsInformation = React.lazy(() => import('./pages/personalCenter/log
 const SetUp = React.lazy(() => import('./pages/personalCenter/setUp/SetUp')); // 个人中心-设置
 const BindingPhone = React.lazy(() => import('./pages/personalCenter/setUp/common/bindingPhone/BindingPhone')); // 个人中心-设置-绑定电话
 const ReceivingAddress = React.lazy(() => import('./pages/personalCenter/receivingAddress/ReceivingAddress')); // 个人中心-设置-收货地址
+const CouponCenter = React.lazy(() => import('./pages/couponCenter/CouponCenter')); // 卡券中心
 
 const Redirect404 = React.lazy(() => import('./pages/redirect404/Redirect404')); // 重定向404
 
@@ -181,6 +182,13 @@ function App() {
         render={props => 
           <Suspense fallback={<Loading/>}>
             <ReceivingAddress {...props} />
+          </Suspense>
+        }
+       />
+       <Route exact cacheKey="CouponCenter" path="/coupon-center"
+        render={props => 
+          <Suspense fallback={<Loading/>}>
+            <CouponCenter {...props} />
           </Suspense>
         }
        />

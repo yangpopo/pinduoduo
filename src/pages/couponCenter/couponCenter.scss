@@ -1,0 +1,15 @@
+.coupon-center-load{
+  background-color: #f4f4f4;
+  width: 100vw !important;
+  height: 100vh;
+  .coupon-center-navbar{
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    top: 25px;
+    left: 0;
+    .rule-but{
+      color: #61492f;
+    }
+  }
+}
