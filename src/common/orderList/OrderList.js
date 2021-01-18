@@ -3,7 +3,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import "./orderList.scss";
 import PropTypes from 'prop-types';
-import { Link, useHistory } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 
 const OrderList = (props) => {
@@ -28,10 +28,9 @@ const OrderList = (props) => {
     }, 100)
   }
 
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoGoodsClick = (orderId) => {
-    history.push("/order-details/" + orderId);
+    props.history.replace("/order-details/" + orderId);
   }
 
   // 价格转化

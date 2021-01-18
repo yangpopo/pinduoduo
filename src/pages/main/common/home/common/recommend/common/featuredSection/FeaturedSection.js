@@ -2,7 +2,6 @@
 
 import React from 'react';
 import "./featuredSection.scss";
-import { useHistory } from "react-router-dom";
 import FeaturedSectionIcon01 from "assets/img/recommend/featured-section-icon-01.jpg";
 
 
@@ -13,11 +12,10 @@ const FeaturedSection = (props) => {
   const url = props.dataJson.url;
   const data = props.dataJson.data;
   
-  let history = useHistory();
 
   // 点击跳转跳转
   const linkGoClick = (val) => {
-    history.push("/" + url + "/" + val);
+    props.history.replace("/" + url + "/" + val);
   }
 
   return (

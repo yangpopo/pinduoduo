@@ -2,19 +2,18 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./applySelectAfterSales.scss";
-import { NavBar, Icon } from "zarm";
-import { useHistory, useParams } from "react-router-dom";
+import { NavBar ,Icon } from 'antd-mobile';
+import { useParams } from "react-router-dom";
 
 import PictureInfoList01 from "assets/img/picture/picture-info-list-01.jpg";
 
 const ApplyAfterSales = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (url = null) => {
     if (url == null) {
-      history.go(-1);
+      props.history.goBack();
     } else {
-      history.push(url);
+      props.history.replace(url);
     }
   }
   // 传递id值
@@ -26,17 +25,11 @@ const ApplyAfterSales = (props) => {
 
   return(<div className="apply-select-after-sales">
     <NavBar
+      mode="light"
       className="apply-select-after-sales-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
-      </Fragment>}
-      title="选择售后类型"
-    />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {linkGoClick()}}
+    >选择售后类型</NavBar>
     <div className="apply-select-after-sales-box">
       <div className="order-describe" onClick={ () => { linkGoClick("/logistics-information/0") }}>
         <img src={PictureInfoList01} alt="" />

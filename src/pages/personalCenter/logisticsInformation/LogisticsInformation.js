@@ -2,9 +2,9 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./logisticsInformation.scss";
-import { NavBar, Icon, Popup } from "zarm";
-import { WhiteSpace } from 'antd-mobile';
-import { useHistory, useParams } from "react-router-dom";
+import { Popup } from "zarm";
+import { WhiteSpace, NavBar ,Icon } from 'antd-mobile';
+import { useParams } from "react-router-dom";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 import WindowList from "common/windowList/WindowList"; // 产品橱窗列表
 
@@ -19,13 +19,12 @@ const LogisticsInformation = (props) => {
   // 传递id值
   const { id } = useParams();
 
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (url = null) => {
     if (url == null) {
-      history.go(-1);
+      props.history.goBack();
     } else {
-      history.push(url);
+      props.history.replace(url);
     }
   }
 
@@ -118,18 +117,12 @@ const LogisticsInformation = (props) => {
 
   return(<div className="logistics-information">
     <NavBar
+      mode="light"
       className="logistics-information-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
-      </Fragment>}
-      title="已发货"
-      right={<svg onClick={ () => {setSharePopupStatus(true)} } className="icon-shop-but" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12089"><path d="M543.503059 102.068706l-2.831059 530.55247a30.117647 30.117647 0 0 1-60.235294-0.301176l2.800941-528.715294-160.768 160.768a30.117647 30.117647 0 0 1-42.586353-42.586353L492.845176 8.824471a30.117647 30.117647 0 0 1 42.586353 0l212.961883 212.961882a30.117647 30.117647 0 1 1-42.586353 42.586353l-162.334118-162.334118zM708.306824 391.529412a30.117647 30.117647 0 0 1 0-60.235294H873.411765a60.235294 60.235294 0 0 1 60.235294 60.235294v572.235294a60.235294 60.235294 0 0 1-60.235294 60.235294H150.588235a60.235294 60.235294 0 0 1-60.235294-60.235294V391.529412a60.235294 60.235294 0 0 1 60.235294-60.235294h163.056941a30.117647 30.117647 0 0 1 0 60.235294H150.588235v572.235294h722.82353V391.529412h-165.104941z" p-id="12090"></path></svg>}
-    />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {linkGoClick()}}
+      rightContent={<svg onClick={ () => {setSharePopupStatus(true)} } className="icon-shop-but" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12089"><path d="M543.503059 102.068706l-2.831059 530.55247a30.117647 30.117647 0 0 1-60.235294-0.301176l2.800941-528.715294-160.768 160.768a30.117647 30.117647 0 0 1-42.586353-42.586353L492.845176 8.824471a30.117647 30.117647 0 0 1 42.586353 0l212.961883 212.961882a30.117647 30.117647 0 1 1-42.586353 42.586353l-162.334118-162.334118zM708.306824 391.529412a30.117647 30.117647 0 0 1 0-60.235294H873.411765a60.235294 60.235294 0 0 1 60.235294 60.235294v572.235294a60.235294 60.235294 0 0 1-60.235294 60.235294H150.588235a60.235294 60.235294 0 0 1-60.235294-60.235294V391.529412a60.235294 60.235294 0 0 1 60.235294-60.235294h163.056941a30.117647 30.117647 0 0 1 0 60.235294H150.588235v572.235294h722.82353V391.529412h-165.104941z" p-id="12090"></path></svg>}
+    >已发货</NavBar>
     <UpDownLoad id="logistics-information-mescroll" className="logistics-information-mescroll" getAjaxData={getAjaxData}>
       <div className="express-info">
         <img className="picture-img" src={pictureInfoList01} alt="" />

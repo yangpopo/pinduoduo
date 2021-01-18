@@ -2,7 +2,7 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./shopInfoUnit.scss";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Popper } from 'zarm';
 import headPortrait from "assets/img/picture/head-portrait.jpg"; // 品牌logo
 import pictureInfoList01 from "assets/img/picture/picture-info-list-01.jpg";
@@ -10,11 +10,10 @@ import pictureInfoList02 from "assets/img/picture/picture-info-list-02.jpg";
 import pictureInfoList03 from "assets/img/picture/picture-info-list-03.jpg";
 
 
-const ShopUnit = () => {
-  let history = useHistory();
+const ShopUnit = (props) => {
   // 点击跳转跳转
   const linkGoClick = () => {
-    history.push("/shop/0");
+    props.history.replace("/shop/0");
   }
 
   const [popperVisible, setPopperVisible] = useState(false);

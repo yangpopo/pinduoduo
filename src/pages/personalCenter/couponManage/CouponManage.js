@@ -2,9 +2,8 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./couponManage.scss";
-import { NavBar, Icon } from "zarm";
-import { Tabs, WhiteSpace  } from 'antd-mobile';
-import { useHistory, Link } from "react-router-dom";
+import { Tabs, WhiteSpace, NavBar, Icon  } from 'antd-mobile';
+import { Link } from "react-router-dom";
 
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 import CouponCenter from "./common/couponCenter/CouponCenter"; // 领券中心
@@ -18,10 +17,9 @@ import RecommendCoupon from "./common/recommendCoupon/RecommendCoupon"; // 推�
 
 const CouponManage = (props) => {
   const [menuIndex, setMenuIndex] = useState(0)
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = () => {
-    history.go(-1);
+    props.history.goBack();
   }
 
   const tabs = [
@@ -41,19 +39,23 @@ const CouponManage = (props) => {
     }
   }
 
+  useEffect(() => {
+    // 修改状态栏字体颜色
+    try {
+      // eslint-disable-next-line no-undef
+      plus.navigator.setStatusBarStyle('dark'); // 黑色
+    } catch (e) {
+
+    }
+  });
+
   return (<div className="coupon-manage">
     <NavBar
+      mode="light"
       className="coupon-manage-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
-      </Fragment>}
-      title="我的优惠券"
-    />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {linkGoClick()}}
+    >我的优惠券</NavBar>
     <UpDownLoad id="coupon-manage-mescroll" className="coupon-manage-mescroll" getAjaxData={getAjaxData}>
       <Tabs tabs={tabs}
         initialPage={menuIndex}

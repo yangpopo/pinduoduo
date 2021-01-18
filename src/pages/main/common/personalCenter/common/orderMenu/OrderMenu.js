@@ -5,9 +5,9 @@ import "./orderMenu.scss";
 import { Grid, Badge } from 'antd-mobile';
 import { useHistory } from "react-router-dom"; // 路由
 
-const OrderMenu = () => {
-  let history = useHistory();
+const OrderMenu = (props) => {
   // 点击跳转跳转
+  let history = useHistory();
   const linkGoClick = (val) => {
     history.push("/my-order/" + val.id);
   }

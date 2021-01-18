@@ -2,22 +2,21 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./refundDetails.scss";
-import { NavBar, Icon, Cell } from "zarm";
-import { WhiteSpace } from 'antd-mobile';
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Cell } from "zarm";
+import { NavBar, Icon, WhiteSpace } from 'antd-mobile';
+import { Link, useParams } from "react-router-dom";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 
 import HeadPortrait from "assets/img/picture/head-portrait.jpg";
 import PictureInfoList01 from "assets/img/picture/picture-info-list-01.jpg";
 
-const RefundDetails = () => {
-  let history = useHistory();
+const RefundDetails = (props) => {
   // 点击跳转跳转
   const linkGoClick = (url = null) => {
     if(url == null) {
-      history.go(-1);
+      props.history.goBack();
     } else {
-      history.push(url);
+      props.history.replace(url);
     }
   }
 
@@ -38,16 +37,11 @@ const RefundDetails = () => {
 
   return(<div className="refund-details">
     <NavBar
+      mode="light"
       className="refund-details-navbar"
-      left={
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />}
-      title="退款详情"
-    />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => { linkGoClick() }}
+    >我的订单</NavBar>
     <UpDownLoad id="refund-details-mescroll" className="refund-details-mescroll" getAjaxData={getAjaxData}>
       <div className="refund-info">
         <div className="state"><svg className="icon-success" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="976"><path d="M512.697383 63.443961c-247.539816 0-448.208115 200.668299-448.208115 448.208115 0 247.539816 200.668299 448.208115 448.208115 448.208115 247.539816 0 448.208115-200.668299 448.208115-448.208115C960.905498 264.11226 760.237199 63.443961 512.697383 63.443961zM782.650675 386.324696 472.510102 703.184297c-1.057075 1.586125-2.233877 3.100618-3.620457 4.504594-12.155854 12.346189-31.861662 12.346189-44.025703 0L270.811334 551.265282c-12.146645-12.347213-12.146645-32.354895 0-44.683688 12.154831-12.347213 31.860638-12.347213 44.016493 0L446.411701 640.173195l292.213271-298.549583c12.165064-12.346189 31.861662-12.346189 44.025703 0C794.797319 353.9698 794.797319 373.97646 782.650675 386.324696z" p-id="977"></path></svg>退款成功</div>

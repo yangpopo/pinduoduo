@@ -2,23 +2,23 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./applyAfterSales.scss";
-import { useHistory, useLocation, useParams } from "react-router-dom";
-import { NavBar, Icon, Cell, Input, Picker } from "zarm";
-import { WhiteSpace } from 'antd-mobile';
+import { useParams } from "react-router-dom";
+import { Cell, Input, Picker } from "zarm";
+import { NavBar, Icon, WhiteSpace } from 'antd-mobile';
+import { getQueryVariable } from "assets/js/utils";
 
 const ApplyAfterSales = (props) => {
-  let getData = new URLSearchParams(useLocation().search);
-  const [type, setType] = useState(getData.get("type") || 0);
+  // 获取url参数
+  const [type, setType] = useState(getQueryVariable(props, "type") || 0);
   // 传递id值
   const { id } = useParams();
 
   // 点击跳转跳转
-  let history = useHistory();
   const linkGoClick = (url = null) => {
     if (url == null) {
-      history.go(-1);
+      props.history.goBack();
     } else {
-      history.push(url);
+      props.history.replace(url);
     }
   }
 
@@ -66,17 +66,11 @@ const ApplyAfterSales = (props) => {
 
   return(<div className="apply-after-sales">
     <NavBar
+      mode="light"
       className="apply-after-sales-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
-      </Fragment>}
-      title="申请退货退款"
-    />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {linkGoClick()}}
+    >申请退货退款</NavBar>
     <div className="apply-after-sales-box">
       { type == 0 && <Cell className="service-explain" title="因您信誉良好 尊享：7天无理由退款" hasArrow /> }
       <Cell className="option-box" title="申请类型" hasArrow onClick={() => {setTypePicker(true)}} ><Input type="text" value={applyType.label} readOnly={true} /></Cell>

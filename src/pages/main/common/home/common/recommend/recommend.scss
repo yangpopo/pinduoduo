@@ -1,6 +1,6 @@
 #recommend-mescroll{
   width: 100vw;
-  // height: auto;
+  height: calc(100vh - 125px - 10vw);
   box-sizing: border-box;
   .mescroll-box{
     background-color: #fff;

@@ -18,6 +18,8 @@
       top: 50%;
       right: 15px;
       transform: translateY(-50%);
+      width: 6vw;
+      height: 6vw;
       svg.icon{
         width: 3.5vw;
         height: 3.5vw;
@@ -25,6 +27,10 @@
         fill: currentColor;
         overflow: hidden;
         color: #919191;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }

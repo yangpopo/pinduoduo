@@ -26,12 +26,12 @@
         align-items: center;
         white-space: nowrap;
         padding: 10px 0;
-        font-size: 3.5px;
+        font-size: 3.5vw;
         >img{
-          width: 10vw;
-          height: 10vw;
+          width: 9vw;
+          height: 9vw;
           border-radius: 50%;
-          margin-right: 5px;
+          margin-right:2vw;
         }
       }
       .za-cell__footer{
@@ -42,10 +42,10 @@
         align-items: center;
         white-space: nowrap;
         padding: 10px 0;
-        font-size: 3px;
+        font-size: 3vw;
         dt{
           color: #151515;
-          margin-bottom: 5px;
+          margin-bottom: 2vw;
           b{
             color: #c3332b;
           }
@@ -54,7 +54,7 @@
           color: #484848;
         }
         .za-button{
-          margin-left: 5px;
+          margin-left: 1vw;
           background-color: #e02e24;
           font-size: 3.5vw;
           color: #fff;
@@ -79,8 +79,8 @@
     overflow: visible;
     .close-but{
       position: absolute;
-      width: 7vw;
-      height: 7vw;
+      width: 6vw;
+      height: 6vw;
       background-color: #dbdbdb;
       border-radius: 50%;
       top: -4%;
@@ -101,14 +101,14 @@
     h6.title-box{
       font-size: 4vw;
       text-align: center;
-      height: 10vw;
-      line-height: 10vw;
+      height: 12vw;
+      line-height: 12vw;
       border-bottom: 1px solid #dbdbdb;
       width: 100%;
     }
     .line-box{
       width: 100%;
-      height: 90vw;
+      height: 76vw;
       border-radius: 5px;
       overflow-x: hidden;
       overflow-y: scroll;
@@ -121,20 +121,21 @@
           align-items: center;
           white-space: nowrap;
           padding: 10px 0;
-          font-size: 3.5px;
           >img{
             width: 10vw;
             height: 10vw;
             border-radius: 50%;
-            margin-right: 5px;
+            margin-right: 2vw;
           }
           dt{
             color: #151515;
+            font-size: 3.5vw;
             b{
               color: #c3332b;
             }
           }
           dd{
+            font-size: 3.2vw;
             color: #484848;
           }
         }

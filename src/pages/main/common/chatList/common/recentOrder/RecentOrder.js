@@ -2,13 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import "./recentOrder.scss";
-import { useHistory } from "react-router-dom";
 
 const RecentOrder = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (val) => {
-    history.push("/dialogue/" + val);
+    props.history.replace("/dialogue/" + val);
   }
 
   const {id, imgUrl, status} = props.dataJson;

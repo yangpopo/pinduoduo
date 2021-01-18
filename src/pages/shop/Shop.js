@@ -2,9 +2,8 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./shop.scss";
-import { NavBar, Icon, Cell } from 'zarm';
-import { WhiteSpace, Tabs } from 'antd-mobile';
-import { useHistory } from "react-router-dom";
+import { Cell } from 'zarm';
+import { WhiteSpace, Tabs, NavBar, Icon } from 'antd-mobile';
 import SearchIconBlock from "common/searchIconBlock/SearchIconBlock"; // 搜索图标按钮
 import ShareIconBlock from "common/shareIconBlock/ShareIconBlock"; // 分享图标按钮
 import WindowList from "common/windowList/WindowList"; // 产品橱窗列表
@@ -19,7 +18,6 @@ import PictureInfoList03 from "assets/img/picture/picture-info-list-03.jpg";
 import PictureInfoList04 from "assets/img/picture/picture-info-list-04.jpg";
 
 const Shop = (props) => {
-  let history = useHistory();
   // 上拉加载-下拉刷新---加载数据
   const getAjaxData = (page, obj) => {
     if (page === undefined) {
@@ -87,7 +85,7 @@ const Shop = (props) => {
     // 修改状态栏字体颜色
     try {
       // eslint-disable-next-line no-undef
-      plus.navigator.setStatusBarStyle('dark');
+      plus.navigator.setStatusBarStyle('dark'); // 黑色
     } catch (e) {
 
     }
@@ -95,22 +93,15 @@ const Shop = (props) => {
 
   return (<div className="shop-page-box">
     <NavBar
-      left={
-        <Icon 
-          type="arrow-left"
-          theme="default"
-          size="sm"
-          onClick={() => history.go(-1)}
-        />
-      }
-      title="先发果汇店铺"
-      right={
-        <Fragment>
-          <SearchIconBlock className="shop-search" />
-          <ShareIconBlock className="shop-share" />
-        </Fragment>
-      }
-    />
+      mode="light"
+      className="nav-bar"
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {props.history.goBack();}}
+      rightContent={<Fragment>
+        <SearchIconBlock className="shop-search" />
+        <ShareIconBlock className="shop-share" />
+      </Fragment>}
+    >先发果汇店铺</NavBar>
     <UpDownLoad id="shopUpDownLoadId" className="shop-details" getAjaxData={getAjaxData}>
       <div className="shop-up-downLoad">
         <Cell className="shop-head" icon={<img className="head-portrait" src={headPortrait} alt="" />}

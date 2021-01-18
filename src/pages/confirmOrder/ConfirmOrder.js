@@ -2,9 +2,8 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./confirmOrder.scss";
-import { WhiteSpace } from 'antd-mobile';
-import { NavBar, Icon, Cell, Stepper } from 'zarm';
-import { useHistory } from "react-router-dom";
+import { WhiteSpace, NavBar ,Icon } from 'antd-mobile';
+import { Cell, Stepper } from 'zarm';
 import { connect } from "react-redux"; // 链接全局状态
 
 // 下拉刷新
@@ -132,7 +131,6 @@ const ConfirmOrder = (props) => {
     setCouponChoicePopup(false);
   }
 
-  let history = useHistory();
 
   useEffect(() => {
     const downCallback = () => {
@@ -163,17 +161,12 @@ const ConfirmOrder = (props) => {
   })
 
   return (<div className="confirm-order">
-    <NavBar className="nav-bar"
-      left={
-        <Icon
-          type="arrow-left"
-          theme="default"
-          size="sm"
-          onClick={() => { history.go(-1); }}
-        />
-      }
-      title="订单确认"
-    />
+    <NavBar
+      mode="light"
+      className="nav-bar"
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {props.history.goBack();}}
+    >订单确认</NavBar>
     <div id="confirm-order-mescroll" className="mescroll">
       <div className="confirm-order-box">
         <div className="address-box">

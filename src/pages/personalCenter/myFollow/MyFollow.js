@@ -3,16 +3,14 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import "./myFollow.scss";
 import { NavBar, Icon } from "zarm";
-import { useHistory } from "react-router-dom";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 import ShopUnit from "./common/shopUnit/ShopUnit"; // 店铺关注-店铺
 import ShopInfoUnit from "./common/shopInfoUnit/ShopInfoUnit"; // 店铺关注-店铺
 
-const MyFollow = () => {
-  let history = useHistory();
+const MyFollow = (props) => {
   // 点击跳转跳转
   const linkGoClick = () => {
-    history.go(-1);
+    props.history.goBack();
   }
 
   // 上拉加载-下拉刷新---加载数据
@@ -31,14 +29,7 @@ const MyFollow = () => {
   return(<div className="my-follow">
     <NavBar
       className="my-follow-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
-      </Fragment>}
+      left={<svg className="arrow-left-icon" onClick={ () => { linkGoClick() } } viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1427"><path d="M670.676929 777.592984 403.62778 513.362021l265.320785-268.146133c11.776208-11.775184 11.734252-30.908964-0.091074-42.73429l-0.001023 0c-11.825326-11.82635-30.958082-11.867282-42.72815 2.930749L343.100242 488.440421c-3.817955 4.273327-8.205892 9.321296-8.933463 12.045337-4.470825 11.112082-2.232854 24.765033 6.710842 35.987632l286.98213 286.98213c11.875468 8.847505 31.096229 8.893554 42.922578-2.932796C682.606633 808.696376 682.560584 789.476639 670.676929 777.592984z" p-id="1428"></path></svg>}
       title="我的关注"
     />
     <UpDownLoad id="my-follow-mescroll" className="my-follow-mescroll" getAjaxData={getAjaxData}>

@@ -226,6 +226,7 @@ const EvaluationListBox = (props) => {
       onMaskClick={() => setPopupVisible(false)}
       direction="right"
       className="popup-evaluate-list"
+      mountContainer={() => document.querySelector("#productDetailsUpDownLoadId")}
     >
       <div className="popup-box" onTouchMove={(e) => {e.stopPropagation()}}>
         <div className="popup-roll-box" id="popupRollBox">

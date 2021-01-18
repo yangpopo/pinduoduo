@@ -2,17 +2,16 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./shopFollow.scss";
-import { NavBar, Icon } from "zarm";
-import { Link, useHistory } from "react-router-dom";
+import { NavBar ,Icon } from 'antd-mobile';
+import { Link } from "react-router-dom";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 import ShopUnit from "./common/shopUnit/ShopUnit"; // 店铺关注-店铺
 import ShopInfoUnit from "./common/shopInfoUnit/ShopInfoUnit"; // 店铺关注-店铺
 
-const ShopFollow = () => {
-  let history = useHistory();
+const ShopFollow = (props) => {
   // 点击跳转跳转
   const linkGoClick = () => {
-    history.go(-1);
+    props.history.goBack();
   }
 
   // 上拉加载-下拉刷新---加载数据
@@ -26,19 +25,23 @@ const ShopFollow = () => {
     }
   }
 
+  useEffect(() => {
+    // 修改状态栏字体颜色
+    try {
+      // eslint-disable-next-line no-undef
+      plus.navigator.setStatusBarStyle('dark'); // 黑色
+    } catch (e) {
+
+    }
+  });
+
   return(<div class="shop-follow">
     <NavBar
+      mode="light"
       className="shop-follow-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
-      </Fragment>}
-      title="店铺关注"
-    />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {linkGoClick()}}
+    >店铺关注</NavBar>
     <UpDownLoad id="shop-follow-mescroll" className="shop-follow-mescroll" getAjaxData={getAjaxData}>
       {/* 我的关注 */}
       <div class="follow-box">

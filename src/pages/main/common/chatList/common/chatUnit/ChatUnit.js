@@ -2,14 +2,12 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./chatUnit.scss";
-import { useHistory } from "react-router-dom";
 import { SwipeAction, List, Badge } from 'antd-mobile';
 
 const ChatUnit = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (val) => {
-    history.push("/dialogue/" + val);
+    props.history.replace("/dialogue/" + val);
   }
 
   const [dataJson, setDataJson] = useState(props.dataJson);

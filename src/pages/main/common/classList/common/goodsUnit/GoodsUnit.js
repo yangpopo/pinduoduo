@@ -2,14 +2,12 @@
 
 import React, { useState, Suspense } from 'react';
 import "./goodsUnit.scss";
-import { useHistory } from 'react-router-dom';
 import stationImg from "assets/img/public/station-img.jpg"; // 站位图片
 
 const GoodsList = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (val) => {
-      history.push("/product-details/" + val);
+      props.history.replace("/product-details/" + val);
   }
 
   const [dataJson, setDataJson] = useState(props.dataJson);

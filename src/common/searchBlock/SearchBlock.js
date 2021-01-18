@@ -39,6 +39,27 @@ class SearchBlock extends React.Component {
       menuOpen: false,
     });
   }
+  // 在组件接收到新的props或者state但还没有render时被调用
+  componentWillUpdate() {
+    
+    if (this.state.typesOpen == false) {
+      // 修改状态栏字体颜色
+      try {
+        // eslint-disable-next-line no-undef
+        plus.navigator.setStatusBarStyle('light'); //白色
+      } catch (e) {
+        
+      }
+    } else {
+      // 修改状态栏字体颜色
+      try {
+        // eslint-disable-next-line no-undef
+        plus.navigator.setStatusBarStyle('dark'); // 黑色
+      } catch (e) {
+
+      }
+    }
+  }
 
   render() {
     return <Fragment>

@@ -2,11 +2,9 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./officialCouponEffective.scss";
-import { useHistory } from "react-router-dom";
 
 const OfficialCouponEffective = (props) => {
   const [openState, setOpenState] = useState(false); // 信息状态
-  let history = useHistory();
   return (<div className={ props.className ? props.className + " official-coupon-effective" : "official-coupon-effective" }>
     <div className="official-coupon-effective-box">
       <div className="tag">新获得</div>

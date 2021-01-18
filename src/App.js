@@ -25,6 +25,10 @@ const ApplySelectAfterSales = React.lazy(() => import('./pages/personalCenter/ap
 const ApplyAfterSales = React.lazy(() => import('./pages/personalCenter/applyAfterSales/ApplyAfterSales')); // 个人中心-申请售后
 const LogisticsInformation = React.lazy(() => import('./pages/personalCenter/logisticsInformation/LogisticsInformation')); // 个人中心-物流信息
 const SetUp = React.lazy(() => import('./pages/personalCenter/setUp/SetUp')); // 个人中心-设置
+const BindingPhone = React.lazy(() => import('./pages/personalCenter/setUp/common/bindingPhone/BindingPhone')); // 个人中心-设置-绑定电话
+const ReceivingAddress = React.lazy(() => import('./pages/personalCenter/receivingAddress/ReceivingAddress')); // 个人中心-设置-收货地址
+
+const Redirect404 = React.lazy(() => import('./pages/redirect404/Redirect404')); // 重定向404
 
 
 
@@ -32,11 +36,21 @@ function App() {
   document.documentElement.style.setProperty('--theme-primary', '#db3124');
   return (
     <CacheSwitch>
-      <CacheRoute exact cacheKey="index" path="/">
-        <Suspense fallback={<Loading/>}>
-            <Main />
-        </Suspense>
-      </CacheRoute>
+      <CacheRoute exact cacheKey="index" path="/"
+        render={props => {
+            // 修改状态栏字体颜色
+            try {
+              // eslint-disable-next-line no-undef
+              plus.navigator.setStatusBarStyle('light'); // 白色
+            } catch (e) {
+
+            }
+            return (<Suspense fallback={<Loading/>}>
+              <Main {...props} />
+            </Suspense>)
+          }
+        }
+      />
       <CacheRoute exact cacheKey="productDetails" path="/product-details/:id"
         render={props => 
             <Suspense fallback={<Loading/>}>
@@ -156,6 +170,26 @@ function App() {
           </Suspense>
         }
        />
+      <Route exact cacheKey="SetUpBindingPhone" path="/set-up/binding-phone/"
+        render={props => 
+          <Suspense fallback={<Loading/>}>
+            <BindingPhone {...props} />
+          </Suspense>
+        }
+       />
+       <Route exact cacheKey="ReceivingAddress" path="/receiving-address"
+        render={props => 
+          <Suspense fallback={<Loading/>}>
+            <ReceivingAddress {...props} />
+          </Suspense>
+        }
+       />
+       <Route path="*" cacheKey="*" render={props => 
+          
+          <Suspense fallback={<Loading/>}>
+            <Redirect404 {...props} />
+          </Suspense>
+        }/>
     </CacheSwitch>
   );
 }

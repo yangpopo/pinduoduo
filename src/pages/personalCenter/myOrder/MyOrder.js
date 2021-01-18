@@ -2,9 +2,7 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./myOrder.scss";
-import { NavBar, Icon } from "zarm";
-import { Tabs } from 'antd-mobile';
-import { useHistory } from "react-router-dom";
+import { Tabs, NavBar ,Icon } from 'antd-mobile';
 import OrderSearch from "./common/OrderSearch"; // 订单搜索
 
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
@@ -34,10 +32,9 @@ const MyOrder = (props) => {
     }
   }
 
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = () => {
-    history.go(-1);
+    props.history.goBack();
   }
 
   // 菜单切换
@@ -189,26 +186,20 @@ const MyOrder = (props) => {
     // 修改状态栏字体颜色
     try {
       // eslint-disable-next-line no-undef
-      plus.navigator.setStatusBarStyle('dark');
+      plus.navigator.setStatusBarStyle('dark'); // 黑色
     } catch (e) {
 
     }
   }, [menuId]);
 
   return (<div className="my-order">
-    <NavBar
-      className="my-order-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
-      </Fragment>}
-    title="我的订单"
-    right={<OrderSearch />}
-  />
+  <NavBar
+    mode="light"
+    className="my-order-navbar"
+    icon={<Icon type="left" color="#868480" />}
+    onLeftClick={() => {linkGoClick()}}
+    rightContent={<OrderSearch />}
+  >我的订单</NavBar>
   <UpDownLoad id="my-order-mescroll" className="my-order-mescroll" getAjaxData={getAjaxData}>
     <Tabs tabs={tabs}
       page={ parseInt(menuId) }

@@ -3,8 +3,7 @@
 import React, { Fragment, useEffect } from 'react';
 import "./liveBroadcast.scss";
 import { Link } from "react-router-dom"; // 路由
-import { Tabs } from 'antd-mobile';
-import { NavBar } from 'zarm';
+import { Tabs, NavBar, Icon } from 'antd-mobile';
 import SlideLiveRevealBox from "common/slideLiveRevealBox/SlideLiveRevealBox"; // 滑动展示框
 import LiveUnitBox from "./common/liveUnitBox/LiveUnitBox"; // 直播展示单位框
 import FollowedLiveBox from "./common/followedLiveBox/FollowedLiveBox"; // 关注的直播框
@@ -217,7 +216,7 @@ class LiveBroadcast extends React.Component {
     // 修改状态栏字体颜色
     try {
       // eslint-disable-next-line no-undef
-      plus.navigator.setStatusBarStyle('dark');
+      plus.navigator.setStatusBarStyle('dark'); // 黑色
     } catch (e) {
 
     }
@@ -241,16 +240,12 @@ class LiveBroadcast extends React.Component {
   render() {
     return (<Fragment>
       <NavBar
-        title="直播"
+        mode="light"
         className="live-nav-bar"
-        right={
-          <Fragment>
-           <Link key="NavBar" className="live-nav-icon" to="/my-live-broadcast/">
-            <svg className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="76295"><path d="M796.444 515.556l130.674-57.999a28.444 28.444 0 0 1 39.993 25.999v317.44a28.444 28.444 0 0 1-39.993 26.026l-130.674-58.026v84.337a56.889 56.889 0 0 1-56.888 56.89H113.778a56.889 56.889 0 0 1-56.89-56.89v-455.11a56.889 56.889 0 0 1 56.89-56.89h625.778a56.889 56.889 0 0 1 56.888 56.89v117.333zM497.778 312.889a99.556 99.556 0 1 1 0-199.111 99.556 99.556 0 0 1 0 199.11z m-199.111 0a71.111 71.111 0 1 1 0-142.222 71.111 71.111 0 0 1 0 142.222z m42.666 426.667a28.444 28.444 0 0 0 42.553 24.69l199.111-113.778a28.444 28.444 0 0 0 0-49.38L383.887 487.31A28.444 28.444 0 0 0 341.332 512v227.556z m56.89-178.546l113.322 64.768-113.323 64.768V561.01z" fill="#dd2c24" p-id="76296"></path></svg>我要直播
-            </Link>
-          </Fragment>
-        }
-      />
+        rightContent={<Link key="NavBar" className="live-nav-icon" to="/my-live-broadcast/">
+        <svg className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="76295"><path d="M796.444 515.556l130.674-57.999a28.444 28.444 0 0 1 39.993 25.999v317.44a28.444 28.444 0 0 1-39.993 26.026l-130.674-58.026v84.337a56.889 56.889 0 0 1-56.888 56.89H113.778a56.889 56.889 0 0 1-56.89-56.89v-455.11a56.889 56.889 0 0 1 56.89-56.89h625.778a56.889 56.889 0 0 1 56.888 56.89v117.333zM497.778 312.889a99.556 99.556 0 1 1 0-199.111 99.556 99.556 0 0 1 0 199.11z m-199.111 0a71.111 71.111 0 1 1 0-142.222 71.111 71.111 0 0 1 0 142.222z m42.666 426.667a28.444 28.444 0 0 0 42.553 24.69l199.111-113.778a28.444 28.444 0 0 0 0-49.38L383.887 487.31A28.444 28.444 0 0 0 341.332 512v227.556z m56.89-178.546l113.322 64.768-113.323 64.768V561.01z" fill="#dd2c24" p-id="76296"></path></svg>我要直播
+        </Link>}
+      >直播</NavBar>
       <div id="live-broadcast-mescroll" className="mescroll">
         <div className="attention-box">
           <div className="attention-title">

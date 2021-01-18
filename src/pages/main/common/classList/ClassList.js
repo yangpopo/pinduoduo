@@ -3,8 +3,7 @@
 import React, { Fragment } from 'react';
 import "./classList.scss";
 import { Link } from 'react-router-dom';
-// import { NavBar } from 'antd-mobile';
-import { NavBar } from 'zarm';
+import {  NavBar ,Icon } from 'antd-mobile';
 import SearchBlock from "common/searchBlock/SearchBlock"; // 搜索框
 import VerticalMenu from "common/verticalMenu/VerticalMenu"; // 垂直菜单显示
 import GoodsUnit from './common/goodsUnit/GoodsUnit'; // 分类商品单元
@@ -125,10 +124,15 @@ class ClassList extends React.Component {
         className="class-nav-bar"
         right={
           <Fragment>
-            <svg className="icon-class-share" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17653"><path d="M128 597.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v170.666667a42.666667 42.666667 0 0 0 42.666666 42.666666h597.333334a42.666667 42.666667 0 0 0 42.666666-42.666666v-170.666667a42.666667 42.666667 0 1 1 85.333334 0v170.666667a128 128 0 0 1-128 128H213.333333a128 128 0 0 1-128-128v-170.666667a42.666667 42.666667 0 0 1 42.666667-42.666667zM481.834667 97.834667a42.666667 42.666667 0 0 1 60.330666 0l213.333334 213.333333a42.666667 42.666667 0 0 1-60.330667 60.330667L512 188.330667 328.832 371.498667a42.666667 42.666667 0 0 1-60.330667-60.330667l213.333334-213.333333z" p-id="17654"></path><path d="M512 85.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v512a42.666667 42.666667 0 1 1-85.333334 0V128a42.666667 42.666667 0 0 1 42.666667-42.666667z" p-id="17655"></path></svg>
+            
           </Fragment>
         }
       />
+      <NavBar
+        mode="light"
+        className="class-nav-bar"
+        rightContent={<svg className="icon-class-share" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17653"><path d="M128 597.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v170.666667a42.666667 42.666667 0 0 0 42.666666 42.666666h597.333334a42.666667 42.666667 0 0 0 42.666666-42.666666v-170.666667a42.666667 42.666667 0 1 1 85.333334 0v170.666667a128 128 0 0 1-128 128H213.333333a128 128 0 0 1-128-128v-170.666667a42.666667 42.666667 0 0 1 42.666667-42.666667zM481.834667 97.834667a42.666667 42.666667 0 0 1 60.330666 0l213.333334 213.333333a42.666667 42.666667 0 0 1-60.330667 60.330667L512 188.330667 328.832 371.498667a42.666667 42.666667 0 0 1-60.330667-60.330667l213.333334-213.333333z" p-id="17654"></path><path d="M512 85.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v512a42.666667 42.666667 0 1 1-85.333334 0V128a42.666667 42.666667 0 0 1 42.666667-42.666667z" p-id="17655"></path></svg>}
+      >分类</NavBar>
       <div className="search-block-box">
         <SearchBlock />
       </div>

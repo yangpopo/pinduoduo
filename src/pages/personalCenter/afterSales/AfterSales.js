@@ -2,17 +2,15 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./afterSales.scss";
-import { NavBar, Icon } from "zarm";
+import { NavBar ,Icon } from 'antd-mobile';
 import { Tabs } from 'antd-mobile';
-import { useHistory } from "react-router-dom";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 import AfterSaleOrder from "./common/afterSaleOrder/AfterSaleOrder"; // 售后订单
 
-const AfterSales = () => {
-  let history = useHistory();
+const AfterSales = (props) => {
   // 点击跳转跳转
   const linkGoClick = () => {
-    history.go(-1);
+    props.history.goBack();
   }
 
   // 上拉加载-下拉刷新---加载数据
@@ -33,19 +31,23 @@ const AfterSales = () => {
 
   const [dataList, setDataList] = useState([0, 1, 2]);
 
+  useEffect(() => {
+    // 修改状态栏字体颜色
+    try {
+      // eslint-disable-next-line no-undef
+      plus.navigator.setStatusBarStyle('dark'); // 黑色
+    } catch (e) {
+
+    }
+  });
+
   return(<div className="after-sales">
     <NavBar
+      mode="light"
       className="after-sales-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
-      </Fragment>}
-      title="退款/售后"
-    />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {linkGoClick()}}
+    >退款/售后</NavBar>
     <UpDownLoad id="after-sales-mescroll" className="after-sales-mescroll" getAjaxData={getAjaxData}>
       <Tabs tabs={tabs}
         initialPage={0}

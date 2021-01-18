@@ -1,6 +1,9 @@
 .product-details{
   width: 100vw !important;
-  height: calc(100vh - 15vw) !important;
+  // height: calc(100vh - 15vw) !important;
+  height: calc(100vh ) !important;
+  padding-bottom: 15vw;
+  box-sizing: border-box;
   .price-info{
     .za-cell__inner{
       min-height: 35px;
@@ -8,9 +11,9 @@
     .za-cell__content{
       span{
         color: #d72521;
-        font-size: 3vw;
+        font-size: 4vw;
         b{
-          font-size: 3.5vw;
+          font-size: 6vw;
         }
       }
       em{

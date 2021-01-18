@@ -2,14 +2,12 @@
 
 import React, { useEffect } from 'react';
 import "./liveUnitBox.scss";
-import { useHistory } from "react-router-dom"; // 路由
 import stationImg from "assets/img/public/station-img.jpg"; // 站位图片
 
 const LiveUnitBox = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (val) => {
-    history.push("/live-broadcast/" + val);
+    props.history.replace("/live-broadcast/" + val);
   }
   let dataJson = props.dataJson;
 

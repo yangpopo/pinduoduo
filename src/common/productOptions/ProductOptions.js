@@ -2,7 +2,6 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./productOptions.scss";
-import { useHistory } from 'react-router-dom';
 import { connect } from "react-redux"; // 链接全局状态
 import { productOptionsPopupStateFun } from "../../store/global/";
 import { Popup, Stepper } from 'zarm';
@@ -61,11 +60,10 @@ const ProductOptions = (props) => {
     setSelectArray(a);
   }
 
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = () => {
     props.productOptionsPopupStateFun();
-    history.push("/confirm-order/?asdfa={asdfasdfasdf:asdfasf}");
+    props.history.replace("/confirm-order/?asdfa={asdfasdfasdf:asdfasf}");
   }
 
   return(<Popup

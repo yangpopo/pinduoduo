@@ -2,8 +2,7 @@
 
 import React, {Fragment} from 'react';
 import "./chatList.scss";
-// import { NavBar } from 'antd-mobile';
-import { NavBar } from 'zarm';
+import { NavBar,Icon } from 'antd-mobile';
 import SlideLiveRevealBox from "common/slideLiveRevealBox/SlideLiveRevealBox"; // 滑动展示框
 import RecentOrder from "./common/recentOrder/RecentOrder";
 import ChatUnit from "./common/chatUnit/ChatUnit";
@@ -200,9 +199,10 @@ class ChatList extends React.Component {
   render() {
     return (<Fragment>
       <NavBar
-        title="聊天"
+        mode="light"
         className="chat-list-navbar"
-      />
+        icon={<Icon type="left" color="#868480" />}
+      >聊天</NavBar>
       <div id="chat-list-mescroll" className="mescroll">
         <div className="recent-box">
           <div className="title-box">近期的交易订单</div>

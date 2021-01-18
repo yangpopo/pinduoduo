@@ -2,8 +2,7 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./commodityCollection.scss";
-import { NavBar, Icon } from "zarm";
-import { useHistory } from "react-router-dom";
+import { NavBar ,Icon } from 'antd-mobile';
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 import CollectionShopUnit from "./common/collectionShopUnit/CollectionShopUnit"; // 收藏店铺单元
 import SearchBlock from "./common/searchBlock/SearchBlock"; // 结算模块
@@ -11,10 +10,9 @@ import TotalBlock from "./common/totalBlock/TotalBlock"; // 结算模块
 import BatchBlock from "./common/batchBlock/BatchBlock"; // 管理模块
 
 const CommodityCollection = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = () => {
-    history.go(-1);
+    props.history.goBack();
   }
 
   // 上拉加载-下拉刷新---加载数据
@@ -30,23 +28,27 @@ const CommodityCollection = (props) => {
 
   const [totalOrAdmin, setTotalOrAdmin] = useState(true);
 
+  useEffect(() => {
+    // 修改状态栏字体颜色
+    try {
+      // eslint-disable-next-line no-undef
+      plus.navigator.setStatusBarStyle('dark'); // 黑色
+    } catch (e) {
+
+    }
+  });
+
   return(<div className="commodity-collection">
     <NavBar
+      mode="light"
       className="collection-navbar"
-      left={<Fragment>
-      <Icon 
-        type="arrow-left"
-        theme="default"
-        size="sm"
-        onClick={ () => { linkGoClick() } }
-      />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {linkGoClick()}}
+      rightContent={<Fragment>
+        { totalOrAdmin && <SearchBlock className="admin-but" />}
+        <div className="admin-but" onClick={() => {setTotalOrAdmin((val) => {return !val})}}>{totalOrAdmin ? "管理":"完成"}</div>
       </Fragment>}
-      title="商品收藏"
-      right={<Fragment>
-        { totalOrAdmin && <SearchBlock />}
-        <div onClick={() => {setTotalOrAdmin((val) => {return !val})}}>{totalOrAdmin ? "管理":"完成"}</div>
-      </Fragment>}
-    />
+    >商品收藏</NavBar>
     <UpDownLoad id="commodity-collection-mescroll" className="commodity-collection-mescroll" getAjaxData={getAjaxData}>
         <CollectionShopUnit />
         <CollectionShopUnit />

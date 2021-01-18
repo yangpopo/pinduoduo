@@ -2,7 +2,7 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./storeInfoBox.scss";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Swiper from "swiper";
 import "../../../../../node_modules/swiper/dist/css/swiper.min.css";
@@ -14,10 +14,9 @@ import pictureInfoList03 from "assets/img/picture/picture-info-list-03.jpg";
 import pictureInfoList04 from "assets/img/picture/picture-info-list-04.jpg";
 
 const StoreInfoBox = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (id) => {
-    history.push("/product-details/" + id);
+    props.history.replace("/product-details/" + id);
   }
 
   useEffect(() => {

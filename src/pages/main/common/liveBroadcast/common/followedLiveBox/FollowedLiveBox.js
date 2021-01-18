@@ -2,13 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import "./followedLiveBox.scss";
-import { useHistory } from "react-router-dom";
 
 const FollowedLiveBox = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (val) => {
-    history.push("/live-broadcast/" + val);
+    props.history.replace("/live-broadcast/" + val);
   }
 
   const {id, imgUrl, userImg, name} = props.dataJson;

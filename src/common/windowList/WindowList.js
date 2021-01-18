@@ -2,14 +2,12 @@
 
 import React from 'react';
 import "./windowList.scss";
-import { useHistory } from "react-router-dom"; // 路由
 import stationImg from "assets/img/public/station-img.jpg"; // 站位图片
 
 const WindowList = (props) => {
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (url) => {
-    history.push("/product-details/" + url);
+    props.history.replace("/product-details/" + url);
   }
   
   // 数字格式

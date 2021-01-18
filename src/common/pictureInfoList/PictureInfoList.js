@@ -2,7 +2,6 @@
 
 import React from 'react';
 import "./pictureInfoList.scss";
-import { useHistory } from "react-router-dom"; // 路由
 import stationImg from "assets/img/public/station-img.jpg"; // 站位图片
 
 
@@ -15,10 +14,9 @@ const PictureInfoList = (props) => {
   const activity = props.dataJson.activity;
   const quantitySold = props.dataJson.quantitySold;
 
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = () => {
-    history.push("/product-details/" + id);
+    props.history.replace("/product-details/" + id);
   }
 
   return (

@@ -2,7 +2,6 @@
 
 import React, {useEffect} from 'react';
 import "./rankRecommendColumn.scss";
-import { useHistory } from "react-router-dom"; // 路由
 
 const RankRecommendColumn = (props) => {
   const titleRank = props.dataJson.rank.title;
@@ -18,10 +17,9 @@ const RankRecommendColumn = (props) => {
   const urlRecommend = props.dataJson.recommend.url;
 
 
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (url) => {
-    history.push("/" + url);
+    props.history.replace("/" + url);
   }
 
   return (<div className="rank-recommend-column">

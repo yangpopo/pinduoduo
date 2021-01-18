@@ -2,13 +2,11 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./shopCouponEffective.scss";
-import { useHistory } from "react-router-dom";
 
 import pictureInfoList01 from "assets/img/picture/picture-info-list-01.jpg";
 
 const ShopCouponEffective = (props) => {
   const [openState, setOpenState] = useState(false); // 信息状态
-  let history = useHistory();
   
   return (<div className={ props.className ? props.className + " shop-coupon-effective" : "shop-coupon-effective" }>
     <div className="shop-coupon-effective-box">

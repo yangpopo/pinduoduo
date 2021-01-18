@@ -2,9 +2,8 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./orderDetails.scss";
-import { NavBar, Icon } from "zarm";
-import { WhiteSpace } from 'antd-mobile';
-import { Link, useHistory, useParams } from "react-router-dom";
+import { WhiteSpace, NavBar, Icon } from 'antd-mobile';
+import { Link, useParams } from "react-router-dom";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 import WindowList from "common/windowList/WindowList"; // 产品橱窗列表
 import MoreOperations from "./common/moreOperations/MoreOperations"; // 更多操作
@@ -20,13 +19,12 @@ const OrderDetails = (props) => {
   // 传递id值
   const { id } = useParams();
 
-  let history = useHistory();
   // 点击跳转跳转
   const linkGoClick = (url = null) => {
     if (url == null) {
-      history.go(-1);
+      props.history.goBack();
     } else {
-      history.push(url);
+      props.history.replace(url);
     }
   }
 
@@ -84,12 +82,11 @@ const OrderDetails = (props) => {
 
   return(<div className="order-details">
     <NavBar
+      mode="light"
       className="order-details-navbar"
-      left={<Fragment>
-      <Icon type="arrow-left" theme="default" size="sm" onClick={ () => { linkGoClick() } } />
-      </Fragment>}
-      title="待发货"
-    />
+      icon={<Icon type="left" color="#868480" />}
+      onLeftClick={() => {linkGoClick()}}
+    >待发货</NavBar>
     <UpDownLoad id="order-details-mescroll" className="order-details-mescroll" getAjaxData={getAjaxData}>
       <div className="express-info">
         <svg className="icon-express" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="16478"><path d="M1024 100.504a30.864 30.864 0 0 0-30.856-30.856H424.784a30.864 30.864 0 0 0-30.856 30.856V190.4l-208.168-0.688h-0.104a30.856 30.856 0 0 0-26.464 15.008L4.4 462.696A30.976 30.976 0 0 0 0 478.608v237c0 65.456 53.28 118.736 118.768 118.736h48.416c0.488 66.248 54.488 120.008 120.832 120.008s120.344-53.76 120.832-120.008h213.52c0.496 66.248 54.48 120.008 120.832 120.008s120.344-53.76 120.832-120.008h41.176c65.496 0 118.776-53.28 118.776-118.736v-175.28c0-0.704-0.168-1.36-0.2-2.048 0.04-0.696 0.2-1.352 0.2-2.056V100.504z m-61.72 30.864v374H455.848l-0.2-12.88v-361.12h506.632z m-674.264 761.264c-32.624 0-59.16-26.576-59.16-59.184s26.536-59.136 59.16-59.136c32.624 0 59.16 26.52 59.16 59.136s-26.528 59.184-59.16 59.184z m455.192 0c-32.608 0-59.16-26.576-59.16-59.184s26.544-59.136 59.16-59.136 59.168 26.52 59.168 59.136-26.552 59.184-59.168 59.184z m219.072-177.024c0 31.464-25.584 57.016-57.056 57.016h-57.72c-20.992-35.84-59.832-60.032-104.296-60.032-44.72 0-83.752 24.448-104.656 60.624a31.256 31.256 0 0 0-5.912-0.592H392.312c-21-35.84-59.832-60.032-104.296-60.032s-83.296 24.184-104.288 60.032h-64.96c-31.464 0-57.048-25.552-57.048-57.016V487.168l141.352-235.672 187.016 0.632 3.832 241.184v42.912c0 2.736 0.472 5.336 1.136 7.856 1.888 15.24 14.76 27.104 30.48 27.104h536.744v144.424z" p-id="16479"></path><path d="M250.24 311.8a30.904 30.904 0 0 0-42.216 11.024L119.928 473.272a30.856 30.856 0 1 0 53.256 31.192l88.088-150.448a30.832 30.832 0 0 0-11.032-42.216z" p-id="16480"></path></svg>
