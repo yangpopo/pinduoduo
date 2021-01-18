@@ -1,6 +1,6 @@
 // 卡券中心
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import "./couponCenter.scss";
 import { Link, useHistory } from "react-router-dom"; // 路由
 import { WhiteSpace, Tabs, NavBar, Icon } from 'antd-mobile';

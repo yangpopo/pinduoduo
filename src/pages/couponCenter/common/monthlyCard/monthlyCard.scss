@@ -1,9 +1,20 @@
 .monthly-card{
   width: 100%;
-  background-color: #2fd2d1;
+  background-image: linear-gradient(0deg, #fff8ef 20%, #ffe8c9 80%);
   box-sizing: border-box;
-  padding-top: 59px;
+  padding-top: 70px;
+  padding-bottom: 2vw;
   .monthly-card-box{
     width: 90%;
+    height: 45vw;
+    margin: 5vw auto;
+    background-color: #ef4b32;
+    border-radius: 2vw;
+    box-shadow: 0 0 2vw 0 #ef4b32;
+    box-sizing: border-box;
+    padding: 5vw;
+    .head-box{
+      
+    }
   }
 }
