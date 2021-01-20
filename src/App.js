@@ -29,6 +29,7 @@ const BindingPhone = React.lazy(() => import('./pages/personalCenter/setUp/commo
 const ReceivingAddress = React.lazy(() => import('./pages/personalCenter/receivingAddress/ReceivingAddress')); // 个人中心-设置-收货地址
 const CouponCenter = React.lazy(() => import('./pages/couponCenter/CouponCenter')); // 卡券中心
 const CouponRules = React.lazy(() => import('./pages/couponRules/CouponRules')); // 月卡规则介绍
+const VoucherCenter = React.lazy(() => import('./pages/voucherCenter/VoucherCenter')); // 充值中心
 
 const Redirect404 = React.lazy(() => import('./pages/redirect404/Redirect404')); // 重定向404
 
@@ -200,8 +201,16 @@ function App() {
           </Suspense>
         }
        />
+       <Route exact cacheKey="VoucherCenter" path="/voucher-center"
+        render={props => 
+          <Suspense fallback={<Loading/>}>
+            <VoucherCenter {...props} />
+          </Suspense>
+        }
+       />
+
+
        <Route path="*" cacheKey="*" render={props => 
-          
           <Suspense fallback={<Loading/>}>
             <Redirect404 {...props} />
           </Suspense>

@@ -2,7 +2,6 @@
 
 import React, { Fragment, useState } from 'react';
 import "./shareIconBlock.scss";
-import { Link } from 'react-router-dom';
 import { Popup } from 'zarm';
 
 const ShareIconBlock = (props) => {

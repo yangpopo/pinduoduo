@@ -3,7 +3,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import "./topNavigation.scss";
 import { NavBar } from 'zarm';
-import { Link } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom"; // 路由
 import { connect } from "react-redux"; // 链接全局状态
 import { modifyReturnButtonStatus } from "../../store/";
 import ShareIconBlock from "common/shareIconBlock/ShareIconBlock"; // 分享图标按钮
@@ -27,10 +27,11 @@ const TopNavigation = (props) => {
   }
 
   // 返回按钮类型
+  let history = useHistory();
   function returnBut() {
     if (props.backType === "back") {
       // 返回上一页
-      props.history.goBack();
+      history.go(-1);
     } else if (props.backType === "evaluation") {
       props.modifyReturnButtonStatus("back");
     }
