@@ -1,6 +1,6 @@
 .monthly-card{
   width: 100%;
-  background-image: linear-gradient(0deg, #fff8ef 20%, #ffe8c9 80%);
+  background-image: linear-gradient(0deg, #ffffff 20%, #ffe8c9 80%);
   box-sizing: border-box;
   padding-top: 70px;
   padding-bottom: 2vw;
@@ -13,8 +13,85 @@
     box-shadow: 0 0 2vw 0 #ef4b32;
     box-sizing: border-box;
     padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .head-box{
-      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .head{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        .head-portrait{
+          width: 12vw;
+          height: 12vw;
+          border-radius: 50%;
+          border: 3px solid #f9b892;
+          margin-right: 2vw;
+        }
+        dl{
+          dt{
+            font-size: 4vw;
+            color: #f8edcf;
+            margin-bottom: 1vw;
+            display: flex;
+            align-items: center;
+            .icon-level{
+              width: 4vw;
+              height: 4vw;
+              vertical-align: middle;
+              fill: currentColor;
+              overflow: hidden;
+              margin-left: 2vw;
+            }
+          }
+          dd{
+            font-size: 3.2vw;
+            color: #f6c493;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .ask-but{
+              width: 4vw;
+              height: 4vw;
+              vertical-align: middle;
+              fill: currentColor;
+              overflow: hidden;
+              color: #f6c493;
+              margin-left: 1.5vw;
+            }
+          }
+        }
+      }
+      .renew-but{
+        display: block;
+        background-color: #ffe2c4;
+        color: #5f4127;
+        padding: 2vw;
+        border-radius: 5px;
+      }
+    }
+    .bottom-box{
+      color: #f5ebd2;
+      font-size: 4vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      b{
+        font-size: 5vw;
+      }
+      .icon-arrow{
+        width: 5vw;
+        height: 5vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        margin-left: 2vw;
+      }
     }
   }
 }

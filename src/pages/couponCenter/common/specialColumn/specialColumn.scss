@@ -1,0 +1,34 @@
+.special-column{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .column-unit{
+    width: 23vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vw;
+    .icon-img{
+      width: 12vw;
+      height: 12vw;
+      margin-bottom: 2vw;
+    }
+    .info-box{
+      font-size: 4vw;
+      dt{
+        color: #634c46;
+        font-weight: bold;
+        margin-bottom: 2vw;
+        text-align: center;
+      }
+      dd{
+        color: #9a9695;
+        text-align: center;
+      }
+    }
+  }
+}
