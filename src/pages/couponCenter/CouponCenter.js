@@ -53,7 +53,7 @@ const CardCenter = (props) => {
         style={{backgroundColor: `rgba(255 255 255 / ${navBarOpacity}%)`}}
         icon={<Icon type="left" color="#868480" />}
         onLeftClick={() => {props.history.goBack();}}
-        rightContent={<Link to="/" className="rule-but">规则</Link>}
+        rightContent={<Link to="/coupon-rules" className="rule-but">规则</Link>}
       >省钱月卡</NavBar>
       <MonthlyCard />
       <SavePending />
@@ -64,6 +64,10 @@ const CardCenter = (props) => {
         <div className="bottom-box"></div>
       </div>
       <DailyCoupons />
+      <div className="division-box">
+        <div className="top-box"></div>
+        {/* <div className="bottom-box"></div> */}
+      </div>
     </UpDownLoad>
   )
 }

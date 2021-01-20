@@ -1,0 +1,121 @@
+.coupon-rules{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 25px;
+  background-color: #fff;
+  .coupon-rules-navbar{
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .coupon-rules-box{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgb(0, 255, 85);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    .menu{
+      width: 25vw;
+      height: 100%;
+      background-color: #f4f4f4;
+      li{
+        font-size: 4vw;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 12vw;
+        color: #715049;
+        &.select{
+          color: #de3121;
+          background-color: #fff;
+          position: relative;
+          &:before{
+            content:"";
+            display: block;
+            position: absolute;
+            width: 3px;
+            height: 60%;
+            background-color: #de3121;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    .content-box{
+      width: 75vw;
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      padding: 3vw;
+      .rule-unit{
+        width: 100%;
+        padding-bottom: 3vw;
+        border-bottom: 1px solid #f7f7f7;
+        .title{
+          font-size: 4.5vw;
+          font-weight: bold;
+          color: #604d46;
+          padding: 2vw 0 4vw 0;
+        }
+        .rule-box{
+          position: relative;
+          .content{
+            font-size: 3.5vw;
+            line-height: 5vw;
+            height: 5vw;
+            overflow: hidden;
+            color: #887f78;
+          }
+          .but-open{
+            position: absolute;
+            right: 0;
+            bottom: -1.1vw;
+            background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 10% , rgb(255, 255, 255) 90%);
+            font-size: 3.5vw;
+            font-weight: bold;
+            color: #5a3e30;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap; 
+            justify-content: flex-end;
+            width: 20vw;
+            padding: 2vw 0;
+            .icon{
+              width: 3vw;
+              height: 3vw;
+              vertical-align: middle;
+              fill: currentColor;
+              overflow: hidden;
+              color: #a19997;
+              margin-left: 2vw;
+            }
+          }
+          .but-close{
+            font-size: 3.5vw;
+            font-weight: bold;
+            color: #5a3e30;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap; 
+            justify-content: flex-end;
+            .icon{
+              width: 3vw;
+              height: 3vw;
+              vertical-align: middle;
+              fill: currentColor;
+              overflow: hidden;
+              color: #a19997;
+              margin-left: 2vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

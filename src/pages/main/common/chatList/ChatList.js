@@ -205,7 +205,7 @@ class ChatList extends React.Component {
       <div id="chat-list-mescroll" className="mescroll">
         <div className="recent-box">
           <div className="title-box">近期的交易订单</div>
-          <SlideLiveRevealBox>
+          <SlideLiveRevealBox id="chatListSlideLive">
             {
               this.state.recentOrderList.map((item, index) => {
                 return (<RecentOrder dataJson={item} key={item.id.toString() + index.toString()} />)

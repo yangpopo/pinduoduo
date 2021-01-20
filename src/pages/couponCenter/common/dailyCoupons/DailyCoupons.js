@@ -2,6 +2,7 @@
 
 import React, { Fragment, useState, useEffect } from 'react';
 import "./dailyCoupons.scss";
+import SlideLiveRevealBox from "common/slideLiveRevealBox/SlideLiveRevealBox"; // 滑动展示框
 
 const DailyCoupons = () => {
   // 月卡券选择状态
@@ -59,8 +60,75 @@ const DailyCoupons = () => {
           </dl>
           <div className="state"><span className="usable">去使用</span></div>
         </div>
+        <div className="coupon wait">
+          <dl>
+            <dt><b>5</b>元</dt>
+            <dd>满50可用</dd>
+          </dl>
+          <div className="state"><span className="wait">领取</span></div>
+        </div>
+        <div className="coupon wait">
+          <dl>
+            <dt><b>7</b>元</dt>
+            <dd>满70可用</dd>
+          </dl>
+          <div className="state"><span className="wait">领取</span></div>
+        </div>
+        <div className="coupon wait">
+          <dl>
+            <dt><b>9</b>元</dt>
+            <dd>满90可用</dd>
+          </dl>
+          <div className="state"><span className="wait">领取</span></div>
+        </div>
       </div>
     </div>
+    <h2 className="h2-box">
+      <span className="title-box">今日神券</span>
+      <span className="describe-box">仅限今日领取</span>
+    </h2>
+    <SlideLiveRevealBox id="dailyCouponsSlideLive">
+      <div className="swiper-slide today-coupon">
+        <div className="main">
+          <span className="title">年货节福利</span>
+          <dl className="info">
+            <dt><b>25</b>元</dt>
+            <dd>满199可用</dd>
+          </dl>
+        </div>
+        <div className="but-box">立即领取</div>
+      </div>
+      <div className="swiper-slide today-coupon">
+        <div className="main">
+          <span className="title">多多买菜</span>
+          <dl className="info">
+            <dt><b>15</b>元</dt>
+            <dd>最高可得</dd>
+          </dl>
+        </div>
+        <div className="but-box">立即领取</div>
+      </div>
+      <div className="swiper-slide today-coupon">
+        <div className="main">
+          <span className="title">专场可用</span>
+          <dl className="info">
+            <dt><b>4</b>元</dt>
+            <dd>满20可用</dd>
+          </dl>
+        </div>
+        <div className="but-box">立即领取</div>
+      </div>
+      <div className="swiper-slide today-coupon">
+        <div className="main">
+          <span className="title">优选专场</span>
+          <dl className="info">
+            <dt><b>5</b>元</dt>
+            <dd>无门槛券</dd>
+          </dl>
+        </div>
+        <div className="but-box">立即领取</div>
+      </div>
+    </SlideLiveRevealBox>
   </div>)
 }
 

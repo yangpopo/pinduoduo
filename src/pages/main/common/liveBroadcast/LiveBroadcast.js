@@ -252,7 +252,7 @@ class LiveBroadcast extends React.Component {
             <span>关注的直播</span>
             <Link key="mescroll" className="live-nav-icon" to="/attention-link-all/">查看全部<svg className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4803"><path d="M733.11 540.87c-8.41 0.05-16.49-3.25-22.47-9.18L267.69 88.74c-12.41-12.41-12.41-32.52 0-44.93 12.41-12.4 32.52-12.4 44.93 0l442.96 442.96a31.64 31.64 0 0 1 9.36 22.46c0 8.44-3.38 16.53-9.36 22.46a31.636 31.636 0 0 1-22.47 9.18z m0 0" p-id="4804"></path><path d="M290.14999999 983.82c-8.41 0.05-16.49-3.25-22.45999999-9.17a31.657 31.657 0 0 1-9.35999999-22.46c0-8.44 3.37-16.53 9.35999999-22.46L710.64 486.76c12.41-12.4 32.52-12.4 44.93 0 12.41 12.4 12.41 32.52 0 44.93l-442.96 442.96000001a31.594 31.594 0 0 1-22.46000001 9.16999999z m0 0" p-id="4805"></path></svg></Link>
           </div>
-          <SlideLiveRevealBox>
+          <SlideLiveRevealBox id="liveBroadcastSlideLive">
             {
               this.state.slideLiveRevealList.map((item, index) => {
                 return (<FollowedLiveBox dataJson={item} key={item.id.toString() + index.toString()} />)
