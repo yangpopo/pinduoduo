@@ -14,8 +14,9 @@ const VoucherCenter = (props) => {
       onLeftClick={() => {props.history.goBack();}}
       rightContent={<ShareIconBlock className="icon-but" />}
     >充值中心</NavBar>
-
-    
+    <div className="voucher-center-box">
+      
+    </div>
   </div>)
 }
 
