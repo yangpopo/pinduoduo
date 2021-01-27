@@ -1,0 +1,82 @@
+.recharge-coupon{
+  width: 100%;
+  height: 25vw;
+  background-color: #ee514c;
+  border-radius: 2vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  &:before{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -2.5vw;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+  &:after{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    background-color: #fff;
+    border-radius: 50%;
+    bottom: -2.5vw;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+  .price-info{
+    width: 30%;
+    height: 100%;
+    border-right: 1px dashed #aa0e01;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items:center;
+    color: #fff;
+    text-align: center;
+    dt{
+      font-size: 3vw;
+      font-weight: bold;
+      margin-bottom: 2vw;
+      b{
+        font-size: 8vw;
+      }
+    }
+    dd{
+      font-size: 3vw;
+    }
+  }
+  .info{
+    width: 45%;
+    color: #fff;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 5vw;
+    margin-right: 2vw;
+    dt{
+      font-size: 4.5vw;
+      margin-bottom: 3vw;
+    }
+    dd{
+      font-size: 3.5vw;
+    }
+  }
+  .but{
+    font-size: 3.5vw;
+    color: #ee2400;
+    background-color: #fee13b;
+    box-sizing: border-box;
+    padding: 2.8vw;
+    border-radius: 1vw;
+  }
+}

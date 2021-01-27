@@ -1,3 +1,42 @@
 .phone-number{
-  
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 2vw;
+  border-bottom: 1px solid #f1f1f1;
+  .number-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 2vw;
+    .input-number{
+      width: calc(100% - 8vw);
+      height: 7vw;
+      font-size: 8vw;
+      font-weight: bold;
+      margin-right: 1vw;
+      .za-input__content{
+        height: 7vw;
+        line-height: 7vw;
+      }
+    }
+    .mail-but{
+      width: 7vw;
+      height: 7vw;
+      svg.icon-mail{
+        width: 7vw;
+        height: 7vw;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+        color: #5b5b5b;
+      }
+    }
+  }
+  .address{
+    width: 100%;
+    font-size: 4vw;
+    color: #8f8f8f;
+  }
 }

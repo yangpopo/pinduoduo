@@ -18,7 +18,7 @@ const PictureInfoList = (props) => {
   // 点击跳转跳转
   let history = useHistory();
   const linkGoClick = (val) => {
-    history.push("/product-details/" + id);
+    history.push("/product-details/" + val);
   }
 
   return (

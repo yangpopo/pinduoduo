@@ -1,0 +1,51 @@
+.more-recharge{
+  width: 100%;
+  h1.title-box{
+    width: 100%;
+    font-size: 4vw;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 4vw;
+  }
+  .recharge-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    dl{
+      width: 20%;
+      height: 20vw;
+      text-align: center;
+      dt{
+        width: 100%;
+        position: relative;
+        margin-bottom: 2vw;
+        color: #565656;
+        span.tag{
+          position: absolute;
+          background-color: #dd3125;
+          font-size: 3vw;
+          padding: 1vw;
+          border-radius: 4vw;
+          top: -1vw;
+          left: 17vw;
+          color: #fff;
+          transform: translateX(-50%);
+          white-space: nowrap;
+        }
+        svg.icon{
+          width: 8vw;
+          height: 8vw;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+        }
+      }
+      dd{
+        font-size: 3.5vw;
+        color: #565656;
+      }
+    }
+  }
+}

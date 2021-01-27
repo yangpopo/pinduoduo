@@ -36,7 +36,7 @@ const DailyCoupons = () => {
         <dd>待开放</dd>
       </dl>
     </div>
-    <div className="coupon-box">
+    <div className="coupons-coupon-box">
       <h3 className="title-box">本周领券时间剩余<b>2天</b></h3>
       <div className="main-box">
         <div className="coupon fail">

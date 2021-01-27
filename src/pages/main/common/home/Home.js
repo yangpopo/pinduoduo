@@ -42,17 +42,6 @@ const Home = () => {
       return (<Suspense fallback={<Loading />}><CategoryList idCommon={tab.common} /></Suspense>);
     }
   }
-
-  // useEffect(() => {
-  //   // 修改状态栏字体颜色
-  //   try {
-  //     // eslint-disable-next-line no-undef
-  //     plus.navigator.setStatusBarStyle('light'); // 白色
-  //   } catch (e) {
-
-  //   }
-  // })
-    
   return (
     <div className="home">
       <SearchBlock />

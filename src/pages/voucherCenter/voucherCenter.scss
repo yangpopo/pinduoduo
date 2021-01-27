@@ -12,8 +12,10 @@
   }
   .voucher-center-box{
     width: 100%;
+    height: calc(100vh - 70px);
     padding: 3vw;
     box-sizing: border-box;
+    overflow-y: auto;
   }
 }
   
