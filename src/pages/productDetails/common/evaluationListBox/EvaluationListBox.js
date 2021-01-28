@@ -153,7 +153,6 @@ const EvaluationListBox = (props) => {
         setEvaluateListData((val) => {
           return [...val, ...listData]
         });
-        console.log("5454464646");
       }, 1000);
     } else if ((boxHeight + scrollTop) >= (scrollHeight - 10)) {
       // 上拉加载
@@ -186,10 +185,10 @@ const EvaluationListBox = (props) => {
     }
     setTapStretchStateArray(tapStretchState);
 
-    // // 解除事件
-    // return  () => {
-    //   document.querySelector("#popupRollBox").removeEventListener("scroll", dropDownFun);
-    // }
+    // 解除事件
+    return () => {
+      document.querySelector("#popupRollBox").removeEventListener("scroll", dropDownFun);
+    }
   },[tapAllData, stretchState])
 
   return (<div className="evaluation-list-box">
@@ -204,7 +203,7 @@ const EvaluationListBox = (props) => {
         if (index < 2) {
           return (<Cell className="evaluation-cell" key={ item.evaluateId }
             title={<Fragment>
-                <div className="box-title"><img src={ item.headPortrait} alt="" />{ item.name }</div>
+                <div className="box-title"><img src={ item.headPortrait } alt="" />{ item.name }</div>
                 <div className="box-description">{ item.content.text }</div>
               </Fragment>
             }
@@ -212,14 +211,6 @@ const EvaluationListBox = (props) => {
         }
       })
     }
-    
-    {/* <Cell className="evaluation-cell"
-      title={<Fragment>
-          <div className="box-title"><img src={headPortrait} alt="" />标题文字</div>
-          <div className="box-description">阿萨团委 阿斯顿发斯蒂芬 发送到gas发阿斯顿发 阿萨德发安师大 放沙发编程序啊</div>
-        </Fragment>
-      }
-    /> */}
     {/* 弹窗 */}
     <Popup
       visible={props.evaluationPopupVisible}
