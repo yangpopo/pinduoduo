@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import "./main.scss";
 import { TabBar } from 'zarm';
 import { connect } from "react-redux"; // 链接全局状态

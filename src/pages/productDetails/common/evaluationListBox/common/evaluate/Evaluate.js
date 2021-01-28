@@ -1,6 +1,6 @@
 // 评价
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import "./evaluate.scss";
 import { Popup } from 'zarm';
 import PopupBox from "common/popupBox/PopupBox"; // 弹框

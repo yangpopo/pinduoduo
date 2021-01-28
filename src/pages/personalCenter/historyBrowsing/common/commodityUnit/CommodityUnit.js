@@ -4,7 +4,7 @@ import React from 'react';
 import "./commodityUnit.scss";
 import PropTypes from 'prop-types';
 import { Checkbox } from "zarm";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import pictureInfoList01 from "assets/img/picture/picture-info-list-01.jpg";
 
 const CommodityUnit = (props) => {

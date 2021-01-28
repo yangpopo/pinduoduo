@@ -3,7 +3,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import "./liveBroadcast.scss";
 import { Link } from "react-router-dom"; // 路由
-import { Tabs, NavBar, Icon } from 'antd-mobile';
+import { Tabs, NavBar } from 'antd-mobile';
 import SlideLiveRevealBox from "common/slideLiveRevealBox/SlideLiveRevealBox"; // 滑动展示框
 import LiveUnitBox from "./common/liveUnitBox/LiveUnitBox"; // 直播展示单位框
 import FollowedLiveBox from "./common/followedLiveBox/FollowedLiveBox"; // 关注的直播框

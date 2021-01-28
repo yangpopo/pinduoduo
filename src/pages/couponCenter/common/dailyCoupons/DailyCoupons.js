@@ -1,13 +1,12 @@
 // 每日优惠券
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./dailyCoupons.scss";
 import SlideLiveRevealBox from "common/slideLiveRevealBox/SlideLiveRevealBox"; // 滑动展示框
 
 const DailyCoupons = () => {
   // 月卡券选择状态
   const [selectionStatus, setSelectionStatus] = useState(1);
-
 
   return (<div className="daily-coupons">
     <h1 className="h1-box">
