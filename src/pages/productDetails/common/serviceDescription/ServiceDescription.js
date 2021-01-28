@@ -1,6 +1,6 @@
 // 服务说明
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import "./serviceDescription.scss";
 import { Popup, Cell } from 'zarm';
 import PopupBox from "common/popupBox/PopupBox"; // 弹框

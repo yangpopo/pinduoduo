@@ -1,6 +1,6 @@
 // 领券中心
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./couponCenter.scss";
 
 const CouponCenter = (props) => {

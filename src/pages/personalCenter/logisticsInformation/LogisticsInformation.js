@@ -1,6 +1,6 @@
 // 物流信息
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import "./logisticsInformation.scss";
 import { Popup } from "zarm";
 import { WhiteSpace, NavBar ,Icon } from 'antd-mobile';

@@ -1,6 +1,6 @@
 // 充值数量选择
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./rechargeNumber.scss";
 import { ActionSheet, Cell, Button } from 'zarm';
 

@@ -1,6 +1,6 @@
 // 店铺优惠券--有效
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./shopCouponEffective.scss";
 
 import pictureInfoList01 from "assets/img/picture/picture-info-list-01.jpg";

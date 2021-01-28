@@ -1,6 +1,6 @@
 // 售后订单
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./afterSaleOrder.scss";
 import { Link } from "react-router-dom";
 import { Modal } from 'antd-mobile';

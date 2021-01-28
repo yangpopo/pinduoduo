@@ -1,6 +1,6 @@
 // 关注的直播框
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import "./followedLiveBox.scss";
 
 const FollowedLiveBox = (props) => {

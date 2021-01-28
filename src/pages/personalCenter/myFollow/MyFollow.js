@@ -1,6 +1,6 @@
 // 店铺关注-我的关注
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import "./myFollow.scss";
 import { NavBar, Icon } from "zarm";
 import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载

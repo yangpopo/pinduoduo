@@ -1,6 +1,6 @@
 // 直播展示单位框
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./liveUnitBox.scss";
 import stationImg from "assets/img/public/station-img.jpg"; // 站位图片
 

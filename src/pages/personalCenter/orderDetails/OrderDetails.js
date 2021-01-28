@@ -1,6 +1,6 @@
 // 订单详情
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./orderDetails.scss";
 import { WhiteSpace, NavBar, Icon } from 'antd-mobile';
 import { Link, useParams } from "react-router-dom";

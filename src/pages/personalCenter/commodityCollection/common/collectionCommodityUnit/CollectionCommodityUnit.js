@@ -1,6 +1,6 @@
 // 收藏商品单元
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./collectionCommodityUnit.scss";
 import { Link } from "react-router-dom";
 import { SwipeAction, Cell, Checkbox } from 'zarm';

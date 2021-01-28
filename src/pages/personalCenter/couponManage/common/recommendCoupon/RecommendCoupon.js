@@ -1,6 +1,6 @@
 // 推荐优惠券
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import "./recommendCoupon.scss";
 import { WhiteSpace } from 'antd-mobile';
 import { Progress } from 'zarm';

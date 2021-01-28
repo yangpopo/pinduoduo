@@ -1,6 +1,6 @@
 // 绑定电话
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./bindingPhone.scss";
 import { NoticeBar } from "zarm";
 import { NavBar ,Icon } from 'antd-mobile';

@@ -1,6 +1,6 @@
 // 店铺关注-店铺
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./shopUnit.scss";
 import { Link } from "react-router-dom";
 import headPortrait from "assets/img/picture/head-portrait.jpg"; // 品牌logo

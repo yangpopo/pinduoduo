@@ -1,6 +1,6 @@
 // 已使用过的优惠券
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./couponUsed.scss";
 import { Link } from "react-router-dom";
 import pictureInfoList01 from "assets/img/picture/picture-info-list-01.jpg";

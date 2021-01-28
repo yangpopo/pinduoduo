@@ -1,6 +1,6 @@
 // 手机号
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./phoneNumber.scss";
 import { Input } from 'zarm';
 

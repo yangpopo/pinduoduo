@@ -1,6 +1,6 @@
 // 充值优惠券
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./rechargeCoupon.scss";
 
 const RechargeCoupon = () => {

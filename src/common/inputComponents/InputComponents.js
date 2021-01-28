@@ -1,6 +1,6 @@
 // 输入组件
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./inputComponents.scss";
 import emoji from "assets/js/emoji"; // 图标地址
 import PropTypes from 'prop-types'; // 校验传参类型

@@ -1,6 +1,6 @@
 // 评价内容列表
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import "./evaluationList.scss";
 import { ImagePreview } from 'zarm';
 import Evaluate from "../evaluate/Evaluate"; // 评价

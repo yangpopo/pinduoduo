@@ -1,6 +1,6 @@
 // 已过期的优惠券
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./couponInvalid.scss";
 
 const CouponInvalid = (props) => {

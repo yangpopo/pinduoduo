@@ -1,6 +1,6 @@
 // 推荐
 
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 import "./recommend.scss";
 import { WhiteSpace } from 'antd-mobile';
 import Group from "./common/group/Group"; // 拼小圈
@@ -8,9 +8,7 @@ import Navigation from "./common/navigation/Navigation"; // 导航
 import FeaturedSection from "./common/featuredSection/FeaturedSection"; // 特色栏目
 import PictureInfoList from "common/pictureInfoList/PictureInfoList"; // 产品列表
 
-import "assets/css/mescroll.min.css";
-import MeScroll from "assets/js/mescroll.min.js";
-
+import UpDownLoad from "common/upDownLoad/UpDownLoad"; // 下拉刷新上拉加载
 
 // 多多菜园--data
 import FeaturedSection01 from "assets/img/picture/featured-section-01.jpg"; 
@@ -37,65 +35,50 @@ const vegetableGardenIcon = <svg className="icon" viewBox="0 0 1024 1024" versio
 // 百亿补贴--data
 const subsidyIcon = <svg className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="54370"><path d="M140.992 850.812c-5.196 2.728-11.594 1.47-15.446-2.96C47.352 757.952 0 640.508 0 512 0 229.234 229.226 0 512 0c282.78 0 512.976 231.032 511.992 513.812-0.452 131.454-50.452 251.22-132.288 341.64-107.5-58.32-238.422-92.576-379.704-92.576-137.492 0-265.172 32.436-371.008 87.936z m0 0" fill="#C92C2C" p-id="54371"></path><path d="M512 1024c-155.774 0-295.274-69.58-389.18-179.336a3981.266 3981.266 0 0 1 51.884-639.04h674.592a3981.192 3981.192 0 0 1 51.884 639.04C807.274 954.422 667.774 1024 512 1024z m0 0" fill="#FBC56D" p-id="54372"></path><path d="M879.57 140v68.11c0 11.04-8.952 20-20 20h-78.164c9.75 0.968 17.906 8.632 18.554 18.56 0.75 11.65-8.476 21.33-19.96 21.33H369.258c-81.368 0-149.696 61.07-158.984 141.9a4368.85 4368.85 0 0 0-28.618 493.232 515.912 515.912 0 0 1-58.836-58.468 3981.584 3981.584 0 0 1 48.328-616.554h-6.72c-11.046 0-20-8.954-20-20V140c0-11.046 8.954-20 20-20h695.142c11.048 0 20 8.954 20 20z m0 0" fill="#EBAE56" p-id="54373"></path><path d="M859.57 228.11H200c-11.046 0-20-8.954-20-20V140c0-11.046 8.954-20 20-20h659.57c11.048 0 20 8.954 20 20v68.11c0 11.046-8.952 20-20 20z m0 0" fill="#FBC56D" p-id="54374"></path><path d="M910.6 434.126l-140-87.5a20 20 0 0 0-21.2 0l-140 87.5a20.008 20.008 0 0 0-9.4 16.96V860c0 11.046 8.954 20 20 20h280c11.046 0 20-8.954 20-20V451.086c0-6.9-3.554-13.304-9.4-16.96zM780 460h-40c-11.046 0-20-8.954-20-20s8.954-20 20-20h40c11.046 0 20 8.954 20 20s-8.954 20-20 20z m0 0" fill="#49CB5C" p-id="54375"></path><path d="M660 880h-40c-11.046 0-20-8.954-20-20V451.086c0-6.9 3.554-13.304 9.4-16.96l31.396-19.626A19.92 19.92 0 0 0 640 420v440c0 11.046 8.954 20 20 20z m0 0" fill="#0CC33C" p-id="54376"></path><path d="M890 670c0 71.796-58.204 130-130 130s-130-58.204-130-130 58.204-130 130-130 130 58.204 130 130z m0 0" fill="#73D37A" p-id="54377"></path><path d="M855 610.36l-154.64 154.64c-9.766 9.766-25.594 9.766-35.36 0s-9.766-25.594 0-35.36l154.64-154.64c9.766-9.766 25.594-9.766 35.36 0s9.766 25.594 0 35.36zM690 635c19.328 0 35-15.672 35-35s-15.672-35-35-35-35 15.672-35 35 15.672 35 35 35z m140 70c-19.328 0-35 15.672-35 35s15.672 35 35 35 35-15.672 35-35-15.672-35-35-35z m0 0" fill="#FFF5F5" p-id="54378"></path><path d="M780 120v340h-40V120z m0 0" fill="#495959" p-id="54379"></path><path d="M602 250c0 49.704-40.296 90-90 90s-90-40.296-90-90 40.296-90 90-90 90 40.296 90 90z m0 0" fill="#FC6930" p-id="54380"></path><path d="M600.196 268h-176.392a90.456 90.456 0 0 1 0.914-40h174.564a90.456 90.456 0 0 1 0.914 40z m0 0" fill="#EE4424" p-id="54381"></path></svg>;
 
+const Recommend = (props) => {
+  // 多多菜园
+  const [vegetableGarden, setVegetableGarden] = useState({
+      icon: vegetableGardenIcon,
+      title: "多多菜园",
+      description: "次日达",
+      url: "vegetable-garden",
+      data: [
+        {imgUrl: FeaturedSection01, price:"9.99", id: "0"},
+        {imgUrl: FeaturedSection02, price:"8.99", id: "1"},
+        {imgUrl: FeaturedSection03, price:"16.99", id: "2"},
+        {imgUrl: FeaturedSection04, price:"1.99", id: "3"},
+      ]
+    });
+
+  // 百亿补贴
+  const [subsidy, setSubsidy] = useState({
+    icon: subsidyIcon,
+    title: "百亿补贴",
+    description: "大牌正品",
+    url: "subsidy",
+    data: [
+      {imgUrl: FeaturedSection05, price:"9.99", id: "0"},
+      {imgUrl: FeaturedSection06, price:"8.99", id: "1"},
+      {imgUrl: FeaturedSection07, price:"16.99", id: "2"},
+      {imgUrl: FeaturedSection08, price:"1.99", id: "3"},
+    ]
+  });
+
+  // 商品列表
+  const [commodityList, setCommodityList] = useState([]);
 
 
-class Recommend extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // 多多菜园
-      vegetableGarden: {
-        icon: vegetableGardenIcon,
-        title: "多多菜园",
-        description: "次日达",
-        url: "vegetable-garden",
-        data: [
-          {imgUrl: FeaturedSection01, price:"9.99", id: "0"},
-          {imgUrl: FeaturedSection02, price:"8.99", id: "1"},
-          {imgUrl: FeaturedSection03, price:"16.99", id: "2"},
-          {imgUrl: FeaturedSection04, price:"1.99", id: "3"},
-        ]
-      },
-      // 百亿补贴
-      subsidy:{
-        icon: subsidyIcon,
-        title: "百亿补贴",
-        description: "大牌正品",
-        url: "subsidy",
-        data: [
-          {imgUrl: FeaturedSection05, price:"9.99", id: "0"},
-          {imgUrl: FeaturedSection06, price:"8.99", id: "1"},
-          {imgUrl: FeaturedSection07, price:"16.99", id: "2"},
-          {imgUrl: FeaturedSection08, price:"1.99", id: "3"},
-        ]
-      },
-      // 商品列表
-      commodityList:[],
-      mescroll: Object
-    }
-  }
-
-  // 第一次渲染后调用
-  componentDidMount() {
-    /*下拉刷新的回调 */
-    const downCallback = () => {
-      // 联网成功的回调,隐藏下拉刷新的状态;
-      this.setState({
-        commodityList:[
-          {imgUrl: PictureInfoList01, price:"9.99", id: "0", title:"阿斯顿发送到沙发上撒旦法", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:23423},
-          {imgUrl: PictureInfoList02, price:"19.99", id: "1", title:"更好地风格十多个十多个问", tag:["极速退款", "满13返2"], activity:[1,2,3], quantitySold:34534},
-          {imgUrl: PictureInfoList03, price:"29.99", id: "2", title:"山东分公司删除VB还关心程维高电饭锅", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:56756},
-          {imgUrl: PictureInfoList04, price:"39.99", id: "3", title:"闪电发货瓦尔塔SV关闭", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:87934},
-        ]
-      });
-      this.state.mescroll.resetUpScroll();
-      //联网失败的回调,隐藏下拉刷新的状态
-      // mescroll.endErr();
-    }
-
-    /*上拉加载的回调 page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数 */
-    const upCallback = (page) => {
-      //联网成功的回调,隐藏下拉刷新的状态;
+  // 上拉加载-下拉刷新---加载数据
+  const getAjaxData = (page, obj) => {
+    if (page === undefined) {
+      setCommodityList([
+        {imgUrl: PictureInfoList01, price:"9.99", id: "0", title:"阿斯顿发送到沙发上撒旦法", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:23423},
+        {imgUrl: PictureInfoList02, price:"19.99", id: "1", title:"更好地风格十多个十多个问", tag:["极速退款", "满13返2"], activity:[1,2,3], quantitySold:34534},
+        {imgUrl: PictureInfoList03, price:"29.99", id: "2", title:"山东分公司删除VB还关心程维高电饭锅", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:56756},
+        {imgUrl: PictureInfoList04, price:"39.99", id: "3", title:"闪电发货瓦尔塔SV关闭", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:87934},
+      ]);
+      obj.resetUpScroll();
+    } else {
       setTimeout(() => {
         let curPageData = [
             {imgUrl: PictureInfoList01, price:"9.99", id: "0", title:"阿斯顿发送到沙发上撒旦法", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:23423},
@@ -103,68 +86,31 @@ class Recommend extends React.Component {
             {imgUrl: PictureInfoList03, price:"29.99", id: "2", title:"山东分公司删除VB还关心程维高电饭锅", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:56756},
             {imgUrl: PictureInfoList04, price:"39.99", id: "3", title:"闪电发货瓦尔塔SV关闭", tag:["立减3元", "退货包邮"], activity:[1,2,3], quantitySold:87934},
           ];
-        this.setState({
-          commodityList:[...this.state.commodityList, ...curPageData]
-        })
-        this.state.mescroll.endByPage(page.num * page.size, 5); // 总的页码数
-      }, 1000)
-      //联网失败的回调,隐藏下拉刷新的状态
-      // mescroll.endErr();
+        setCommodityList([...commodityList, ...curPageData]);
+        obj.endByPage(page.num * page.size, 5); // 总的页码数
+      }, 1000);
     }
-
-    // 创建MeScroll对象
-    this.setState({
-      mescroll: new MeScroll("recommend-mescroll", {
-        down: {
-          auto: false, //是否在初始化完毕之后自动执行下拉回调callback; 默认true
-          callback: downCallback //下拉刷新的回调
-        },
-        up: {
-          lazyLoad: {
-            use: true, // 是否开启懒加载,默认false
-            // attr: 'imgurl', // 网络地址的属性名 (图片加载成功会移除该属性): <img imgurl='网络图  src='占位图''/>
-            showClass: 'mescroll-lazy-in', // 图片加载成功的显示动画: 渐变显示,参见mescroll.css
-            delay: 500, // 列表滚动的过程中每500ms检查一次图片是否在可视区域,如果在可视区域则加载图片
-            offset: 200 // 超出可视区域200px的图片仍可触发懒加载,目的是提前加载部分图片
-          },
-          auto: true, //是否在初始化时以上拉加载的方式自动加载第一页数据; 默认false
-          isBounce: false, //此处禁止ios回弹,解析(务必认真阅读,特别是最后一点): http://www.mescroll.com/qa.html#q10
-          callback: upCallback, //上拉回调,此处可简写; 相当于 callback: function (page) { upCallback(page); }
-          page: {
-            num: 0, //当前页 默认0,回调之前会加1; 即callback(page)会从1开始
-            size: 10 //每页数据条数,默认10
-          },
-          htmlNodata: '<p class="upwarp-nodata">-- 暂无数据 --</p>'
-        }
-      })
-    })
   }
 
-  // 卸载时执行
-  componentWillUnmount() {
-    this.state.mescroll.destroy();
-  }
 
-  render() {
-    return (<div id="recommend-mescroll" className="mescroll">
+  return(<UpDownLoad id="recommend-mescroll" className="recommend-mescroll" getAjaxData={getAjaxData}>
     <Group />
     <Navigation/>
     <div className="featured-section-box">
       <WhiteSpace size='sm' />
-      <FeaturedSection dataJson={ this.state.vegetableGarden } />
+      <FeaturedSection dataJson={ vegetableGarden } />
       <WhiteSpace size='sm' />
-      <FeaturedSection dataJson={ this.state.subsidy } />
+      <FeaturedSection dataJson={ subsidy } />
       <WhiteSpace size='sm' />
     </div>
     <div className="mescroll-box">
       {
-        this.state.commodityList.map((item, index) => {
+        commodityList.map((item, index) => {
           return (<PictureInfoList dataJson={item} key={item.id.toString() + index.toString()}/>)
         })
       }
     </div>
-  </div>);
-  }
+  </UpDownLoad>)
 }
 
 export default Recommend;

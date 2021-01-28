@@ -1,6 +1,6 @@
 // 店铺关注-店铺
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./shopInfoUnit.scss";
 import { Link } from "react-router-dom";
 import { Popper } from 'zarm';

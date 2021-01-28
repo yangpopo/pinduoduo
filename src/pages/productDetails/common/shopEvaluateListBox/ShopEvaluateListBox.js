@@ -1,6 +1,6 @@
 // 店铺评价列表
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./shopEvaluateListBox.scss";
 import { Cell } from 'zarm';
 

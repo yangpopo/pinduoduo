@@ -1,8 +1,8 @@
 // 店铺关注-店铺
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./shopInfoUnit.scss";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import headPortrait from "assets/img/picture/head-portrait.jpg"; // 品牌logo
 import pictureInfoList01 from "assets/img/picture/picture-info-list-01.jpg";
 import pictureInfoList02 from "assets/img/picture/picture-info-list-02.jpg";

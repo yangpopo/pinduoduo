@@ -1,6 +1,6 @@
 // 浏览历史-商品单元
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./commodityUnit.scss";
 import PropTypes from 'prop-types';
 import { Checkbox } from "zarm";

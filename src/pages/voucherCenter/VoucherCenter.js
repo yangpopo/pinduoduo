@@ -1,6 +1,6 @@
 // 充值中心
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import "./voucherCenter.scss";
 import { NavBar, Icon, WhiteSpace } from 'antd-mobile';
 import ShareIconBlock from "common/shareIconBlock/ShareIconBlock"; // 分享图标按钮

@@ -1,6 +1,6 @@
 // 个人中心--我的订单
 
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./myOrder.scss";
 import { Tabs, NavBar ,Icon } from 'antd-mobile';
 import OrderSearch from "./common/OrderSearch"; // 订单搜索

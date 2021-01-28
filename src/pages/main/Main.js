@@ -12,7 +12,6 @@ const ChatList = React.lazy(() => import('./common/chatList/ChatList')); // 聊�
 const PersonalCenter = React.lazy(() => import('./common/personalCenter/PersonalCenter')); // 聊天
 
 const Main = (props) => {
-  const [selectedTab, setSelectedTab] = useState("home");
   return (
     <div className="main">
       <div className="main-box">
