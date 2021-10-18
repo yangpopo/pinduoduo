@@ -15,7 +15,7 @@ stages:                                # 构建阶段配置
           name: npm-build           # 构建步骤唯一标识，当前示例中定义了一个标识为 maven-build 的构建步骤
           displayName: 'npm编译静态页面'    # 构建步骤名称当前示例中定义了一个名为 “Maven Step” 的构建步骤
           inputs:                      # 构建输入参数设定
-            nodeVersion: 10.1
+            nodeVersion: 12.7
             goals: |                   # 构建脚本，当前示例中使用 Maven 命令初始化、构建一个 Maven 工程并执行输出内容
               npm install
               npm run build
