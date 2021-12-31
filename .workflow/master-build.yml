@@ -22,5 +22,5 @@ stages:                                # 构建阶段配置
             uploadArtifact: true               # 构建完成后是否将构建物作为制品产出，非必填项，与下方上传参数需同时定义
             uploadArtifactOptions:             # 构建物上传参数，非必填项，与 `uploadArtifact` 参数需同时定义
             artifactPath: './build'         # 构建完成后要打包的构建物所在路径
-            artifactRepository: 'npm编译静态页面'   # 制品库名称，可以理解为一批构建物的集合
+            artifactRepository: 'npm编译部署'   # 制品库名称，可以理解为一批构建物的集合
             artifactName: 'node-build'     # 构建物打包后的制品名
